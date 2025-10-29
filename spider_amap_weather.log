@@ -1,0 +1,904 @@
+2025-10-29 08:57:55,224 - INFO - 进程方法 business_mock_data 已运行
+2025-10-29 08:57:55,227 - INFO - 进程方法 business_mock_data 已运行
+2025-10-29 08:57:58,341 - INFO - 成功插入 335 条记录到 public.logs_user_info_message
+2025-10-29 08:57:58,345 - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 08:57:58,495 - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 08:57:58,496 - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 08:57:58,613 - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 08:57:58,614 - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 08:57:58,615 - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 08:57:59,140 - INFO - Kafka发送完成 - 总条数: 335, 成功: 335, 失败: 0
+2025-10-29 08:57:59,140 - INFO - <KafkaProducer client_id=kafka-python-producer-1 transactional_id=None>: Closing the Kafka producer with 4294967.0 secs timeout.
+2025-10-29 08:57:59,141 - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 08:58:37,874 - INFO - 成功插入 85 条记录到 public.logs_user_info_message
+2025-10-29 08:58:37,877 - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 08:58:37,883 - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 08:58:37,883 - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 08:58:37,987 - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 08:58:38,001 - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 08:58:38,001 - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 08:58:38,121 - INFO - Kafka发送完成 - 总条数: 85, 成功: 85, 失败: 0
+2025-10-29 08:58:38,121 - INFO - <KafkaProducer client_id=kafka-python-producer-1 transactional_id=None>: Closing the Kafka producer with 4294967.0 secs timeout.
+2025-10-29 08:58:38,122 - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 08:59:18,286 - INFO - 成功插入 81 条记录到 public.logs_user_info_message
+2025-10-29 08:59:18,288 - INFO - <BrokerConnection client_id=kafka-python-producer-2, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 08:59:18,292 - INFO - <BrokerConnection client_id=kafka-python-producer-2, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 08:59:18,293 - INFO - <BrokerConnection client_id=kafka-python-producer-2, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 08:59:18,410 - INFO - <BrokerConnection client_id=kafka-python-producer-2, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 08:59:18,411 - INFO - <BrokerConnection client_id=kafka-python-producer-2, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 08:59:18,412 - INFO - <BrokerConnection client_id=kafka-python-producer-2, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 08:59:18,548 - INFO - Kafka发送完成 - 总条数: 81, 成功: 81, 失败: 0
+2025-10-29 08:59:18,550 - INFO - <BrokerConnection client_id=kafka-python-producer-2, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 08:59:58,676 - INFO - 成功插入 91 条记录到 public.logs_user_info_message
+2025-10-29 08:59:58,677 - INFO - <BrokerConnection client_id=kafka-python-producer-3, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 08:59:58,703 - INFO - <BrokerConnection client_id=kafka-python-producer-3, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 08:59:58,704 - INFO - <BrokerConnection client_id=kafka-python-producer-3, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 08:59:58,808 - INFO - <BrokerConnection client_id=kafka-python-producer-3, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 08:59:58,809 - INFO - <BrokerConnection client_id=kafka-python-producer-3, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 08:59:58,809 - INFO - <BrokerConnection client_id=kafka-python-producer-3, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 08:59:58,913 - INFO - Kafka发送完成 - 总条数: 91, 成功: 91, 失败: 0
+2025-10-29 08:59:58,915 - INFO - <BrokerConnection client_id=kafka-python-producer-3, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:00:39,065 - INFO - 成功插入 79 条记录到 public.logs_user_info_message
+2025-10-29 09:00:39,067 - INFO - <BrokerConnection client_id=kafka-python-producer-4, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:00:39,072 - INFO - <BrokerConnection client_id=kafka-python-producer-4, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:00:39,072 - INFO - <BrokerConnection client_id=kafka-python-producer-4, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:00:39,184 - INFO - <BrokerConnection client_id=kafka-python-producer-4, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:00:39,185 - INFO - <BrokerConnection client_id=kafka-python-producer-4, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:00:39,186 - INFO - <BrokerConnection client_id=kafka-python-producer-4, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:00:39,345 - INFO - Kafka发送完成 - 总条数: 79, 成功: 79, 失败: 0
+2025-10-29 09:00:39,346 - INFO - <BrokerConnection client_id=kafka-python-producer-4, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:01:29,495 - INFO - 成功插入 103 条记录到 public.logs_user_info_message
+2025-10-29 09:01:29,496 - INFO - <BrokerConnection client_id=kafka-python-producer-5, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:01:29,498 - INFO - <BrokerConnection client_id=kafka-python-producer-5, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:01:29,500 - INFO - <BrokerConnection client_id=kafka-python-producer-5, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:01:29,605 - INFO - <BrokerConnection client_id=kafka-python-producer-5, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:01:29,609 - INFO - <BrokerConnection client_id=kafka-python-producer-5, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:01:29,610 - INFO - <BrokerConnection client_id=kafka-python-producer-5, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:01:29,747 - INFO - Kafka发送完成 - 总条数: 103, 成功: 103, 失败: 0
+2025-10-29 09:01:29,747 - INFO - <BrokerConnection client_id=kafka-python-producer-5, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:02:09,929 - INFO - 成功插入 87 条记录到 public.logs_user_info_message
+2025-10-29 09:02:09,930 - INFO - <BrokerConnection client_id=kafka-python-producer-6, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:02:09,950 - INFO - <BrokerConnection client_id=kafka-python-producer-6, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:02:09,951 - INFO - <BrokerConnection client_id=kafka-python-producer-6, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:02:10,064 - INFO - <BrokerConnection client_id=kafka-python-producer-6, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:02:10,079 - INFO - <BrokerConnection client_id=kafka-python-producer-6, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:02:10,079 - INFO - <BrokerConnection client_id=kafka-python-producer-6, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:02:10,193 - INFO - Kafka发送完成 - 总条数: 87, 成功: 87, 失败: 0
+2025-10-29 09:02:10,194 - INFO - <BrokerConnection client_id=kafka-python-producer-6, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:02:50,316 - INFO - 成功插入 88 条记录到 public.logs_user_info_message
+2025-10-29 09:02:50,317 - INFO - <BrokerConnection client_id=kafka-python-producer-7, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:02:50,320 - INFO - <BrokerConnection client_id=kafka-python-producer-7, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:02:50,320 - INFO - <BrokerConnection client_id=kafka-python-producer-7, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:02:50,437 - INFO - <BrokerConnection client_id=kafka-python-producer-7, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:02:50,438 - INFO - <BrokerConnection client_id=kafka-python-producer-7, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:02:50,439 - INFO - <BrokerConnection client_id=kafka-python-producer-7, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:02:50,548 - INFO - Kafka发送完成 - 总条数: 88, 成功: 88, 失败: 0
+2025-10-29 09:02:50,548 - INFO - <BrokerConnection client_id=kafka-python-producer-7, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:03:30,662 - INFO - 成功插入 76 条记录到 public.logs_user_info_message
+2025-10-29 09:03:30,663 - INFO - <BrokerConnection client_id=kafka-python-producer-8, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:03:30,679 - INFO - <BrokerConnection client_id=kafka-python-producer-8, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:03:30,680 - INFO - <BrokerConnection client_id=kafka-python-producer-8, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:03:30,783 - INFO - <BrokerConnection client_id=kafka-python-producer-8, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:03:30,785 - INFO - <BrokerConnection client_id=kafka-python-producer-8, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:03:30,785 - INFO - <BrokerConnection client_id=kafka-python-producer-8, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:03:30,877 - INFO - Kafka发送完成 - 总条数: 76, 成功: 76, 失败: 0
+2025-10-29 09:03:30,878 - INFO - <BrokerConnection client_id=kafka-python-producer-8, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:04:17,172 - INFO - 成功插入 85 条记录到 public.logs_user_info_message
+2025-10-29 09:04:17,175 - INFO - <BrokerConnection client_id=kafka-python-producer-9, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:04:17,184 - INFO - <BrokerConnection client_id=kafka-python-producer-9, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:04:17,184 - INFO - <BrokerConnection client_id=kafka-python-producer-9, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:04:17,302 - INFO - <BrokerConnection client_id=kafka-python-producer-9, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:04:17,307 - INFO - <BrokerConnection client_id=kafka-python-producer-9, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:04:17,309 - INFO - <BrokerConnection client_id=kafka-python-producer-9, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:04:17,504 - INFO - Kafka发送完成 - 总条数: 85, 成功: 85, 失败: 0
+2025-10-29 09:04:17,507 - INFO - <BrokerConnection client_id=kafka-python-producer-9, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:04:57,644 - INFO - 成功插入 85 条记录到 public.logs_user_info_message
+2025-10-29 09:04:57,646 - INFO - <BrokerConnection client_id=kafka-python-producer-10, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:04:57,648 - INFO - <BrokerConnection client_id=kafka-python-producer-10, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:04:57,650 - INFO - <BrokerConnection client_id=kafka-python-producer-10, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:04:57,760 - INFO - <BrokerConnection client_id=kafka-python-producer-10, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:04:57,762 - INFO - <BrokerConnection client_id=kafka-python-producer-10, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:04:57,763 - INFO - <BrokerConnection client_id=kafka-python-producer-10, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:04:57,858 - INFO - Kafka发送完成 - 总条数: 85, 成功: 85, 失败: 0
+2025-10-29 09:04:57,858 - INFO - <BrokerConnection client_id=kafka-python-producer-10, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:05:37,957 - INFO - 成功插入 72 条记录到 public.logs_user_info_message
+2025-10-29 09:05:37,959 - INFO - <BrokerConnection client_id=kafka-python-producer-11, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:05:37,963 - INFO - <BrokerConnection client_id=kafka-python-producer-11, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:05:37,964 - INFO - <BrokerConnection client_id=kafka-python-producer-11, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:05:38,075 - INFO - <BrokerConnection client_id=kafka-python-producer-11, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:05:38,076 - INFO - <BrokerConnection client_id=kafka-python-producer-11, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:05:38,076 - INFO - <BrokerConnection client_id=kafka-python-producer-11, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:05:38,161 - INFO - Kafka发送完成 - 总条数: 72, 成功: 72, 失败: 0
+2025-10-29 09:05:38,162 - INFO - <BrokerConnection client_id=kafka-python-producer-11, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:06:18,261 - INFO - 成功插入 78 条记录到 public.logs_user_info_message
+2025-10-29 09:06:18,285 - INFO - <BrokerConnection client_id=kafka-python-producer-12, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:06:18,289 - INFO - <BrokerConnection client_id=kafka-python-producer-12, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:06:18,290 - INFO - <BrokerConnection client_id=kafka-python-producer-12, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:06:18,407 - INFO - <BrokerConnection client_id=kafka-python-producer-12, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:06:18,408 - INFO - <BrokerConnection client_id=kafka-python-producer-12, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:06:18,409 - INFO - <BrokerConnection client_id=kafka-python-producer-12, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:06:18,500 - INFO - Kafka发送完成 - 总条数: 78, 成功: 78, 失败: 0
+2025-10-29 09:06:18,500 - INFO - <BrokerConnection client_id=kafka-python-producer-12, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:07:18,768 - INFO - 成功插入 123 条记录到 public.logs_user_info_message
+2025-10-29 09:07:18,770 - INFO - <BrokerConnection client_id=kafka-python-producer-13, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:07:18,787 - INFO - <BrokerConnection client_id=kafka-python-producer-13, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:07:18,788 - INFO - <BrokerConnection client_id=kafka-python-producer-13, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:07:18,905 - INFO - <BrokerConnection client_id=kafka-python-producer-13, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:07:18,907 - INFO - <BrokerConnection client_id=kafka-python-producer-13, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:07:18,907 - INFO - <BrokerConnection client_id=kafka-python-producer-13, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:07:19,098 - INFO - Kafka发送完成 - 总条数: 123, 成功: 123, 失败: 0
+2025-10-29 09:07:19,098 - INFO - <BrokerConnection client_id=kafka-python-producer-13, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:07:59,230 - INFO - 成功插入 79 条记录到 public.logs_user_info_message
+2025-10-29 09:07:59,232 - INFO - <BrokerConnection client_id=kafka-python-producer-14, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:07:59,236 - INFO - <BrokerConnection client_id=kafka-python-producer-14, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:07:59,237 - INFO - <BrokerConnection client_id=kafka-python-producer-14, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:07:59,342 - INFO - <BrokerConnection client_id=kafka-python-producer-14, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:07:59,343 - INFO - <BrokerConnection client_id=kafka-python-producer-14, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:07:59,343 - INFO - <BrokerConnection client_id=kafka-python-producer-14, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:07:59,474 - INFO - Kafka发送完成 - 总条数: 79, 成功: 79, 失败: 0
+2025-10-29 09:07:59,475 - INFO - <BrokerConnection client_id=kafka-python-producer-14, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:08:39,594 - INFO - 成功插入 76 条记录到 public.logs_user_info_message
+2025-10-29 09:08:39,596 - INFO - <BrokerConnection client_id=kafka-python-producer-15, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:08:39,599 - INFO - <BrokerConnection client_id=kafka-python-producer-15, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:08:39,599 - INFO - <BrokerConnection client_id=kafka-python-producer-15, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:08:39,706 - INFO - <BrokerConnection client_id=kafka-python-producer-15, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:08:39,722 - INFO - <BrokerConnection client_id=kafka-python-producer-15, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:08:39,722 - INFO - <BrokerConnection client_id=kafka-python-producer-15, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:08:39,805 - INFO - Kafka发送完成 - 总条数: 76, 成功: 76, 失败: 0
+2025-10-29 09:08:39,805 - INFO - <BrokerConnection client_id=kafka-python-producer-15, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:09:19,944 - INFO - 成功插入 76 条记录到 public.logs_user_info_message
+2025-10-29 09:09:19,946 - INFO - <BrokerConnection client_id=kafka-python-producer-16, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:09:19,950 - INFO - <BrokerConnection client_id=kafka-python-producer-16, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:09:19,951 - INFO - <BrokerConnection client_id=kafka-python-producer-16, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:09:20,062 - INFO - <BrokerConnection client_id=kafka-python-producer-16, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:09:20,064 - INFO - <BrokerConnection client_id=kafka-python-producer-16, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:09:20,064 - INFO - <BrokerConnection client_id=kafka-python-producer-16, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:09:20,156 - INFO - Kafka发送完成 - 总条数: 76, 成功: 76, 失败: 0
+2025-10-29 09:09:20,157 - INFO - <BrokerConnection client_id=kafka-python-producer-16, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:10:04,390 - INFO - 成功插入 92 条记录到 public.logs_user_info_message
+2025-10-29 09:10:04,392 - INFO - <BrokerConnection client_id=kafka-python-producer-17, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:10:04,395 - INFO - <BrokerConnection client_id=kafka-python-producer-17, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:10:04,395 - INFO - <BrokerConnection client_id=kafka-python-producer-17, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:10:04,507 - INFO - <BrokerConnection client_id=kafka-python-producer-17, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:10:04,522 - INFO - <BrokerConnection client_id=kafka-python-producer-17, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:10:04,524 - INFO - <BrokerConnection client_id=kafka-python-producer-17, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:10:04,652 - INFO - Kafka发送完成 - 总条数: 92, 成功: 92, 失败: 0
+2025-10-29 09:10:04,653 - INFO - <BrokerConnection client_id=kafka-python-producer-17, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:10:44,887 - INFO - 成功插入 80 条记录到 public.logs_user_info_message
+2025-10-29 09:10:44,891 - INFO - <BrokerConnection client_id=kafka-python-producer-18, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:10:44,897 - INFO - <BrokerConnection client_id=kafka-python-producer-18, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:10:44,897 - INFO - <BrokerConnection client_id=kafka-python-producer-18, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:10:45,010 - INFO - <BrokerConnection client_id=kafka-python-producer-18, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:10:45,010 - INFO - <BrokerConnection client_id=kafka-python-producer-18, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:10:45,014 - INFO - <BrokerConnection client_id=kafka-python-producer-18, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:10:45,237 - INFO - Kafka发送完成 - 总条数: 80, 成功: 80, 失败: 0
+2025-10-29 09:10:45,237 - INFO - <BrokerConnection client_id=kafka-python-producer-18, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:11:25,351 - INFO - 成功插入 75 条记录到 public.logs_user_info_message
+2025-10-29 09:11:25,353 - INFO - <BrokerConnection client_id=kafka-python-producer-19, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:11:25,355 - INFO - <BrokerConnection client_id=kafka-python-producer-19, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:11:25,355 - INFO - <BrokerConnection client_id=kafka-python-producer-19, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:11:25,463 - INFO - <BrokerConnection client_id=kafka-python-producer-19, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:11:25,464 - INFO - <BrokerConnection client_id=kafka-python-producer-19, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:11:25,464 - INFO - <BrokerConnection client_id=kafka-python-producer-19, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:11:25,551 - INFO - Kafka发送完成 - 总条数: 75, 成功: 75, 失败: 0
+2025-10-29 09:11:25,551 - INFO - <BrokerConnection client_id=kafka-python-producer-19, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:12:05,655 - INFO - 成功插入 67 条记录到 public.logs_user_info_message
+2025-10-29 09:12:05,656 - INFO - <BrokerConnection client_id=kafka-python-producer-20, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:12:05,659 - INFO - <BrokerConnection client_id=kafka-python-producer-20, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:12:05,659 - INFO - <BrokerConnection client_id=kafka-python-producer-20, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:12:05,764 - INFO - <BrokerConnection client_id=kafka-python-producer-20, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:12:05,764 - INFO - <BrokerConnection client_id=kafka-python-producer-20, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:12:05,764 - INFO - <BrokerConnection client_id=kafka-python-producer-20, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:12:05,839 - INFO - Kafka发送完成 - 总条数: 67, 成功: 67, 失败: 0
+2025-10-29 09:12:05,839 - INFO - <BrokerConnection client_id=kafka-python-producer-20, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:13:12,043 - INFO - 成功插入 132 条记录到 public.logs_user_info_message
+2025-10-29 09:13:12,046 - INFO - <BrokerConnection client_id=kafka-python-producer-21, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:13:12,051 - INFO - <BrokerConnection client_id=kafka-python-producer-21, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:13:12,051 - INFO - <BrokerConnection client_id=kafka-python-producer-21, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:13:12,167 - INFO - <BrokerConnection client_id=kafka-python-producer-21, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:13:12,169 - INFO - <BrokerConnection client_id=kafka-python-producer-21, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:13:12,169 - INFO - <BrokerConnection client_id=kafka-python-producer-21, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:13:12,314 - INFO - Kafka发送完成 - 总条数: 132, 成功: 132, 失败: 0
+2025-10-29 09:13:12,315 - INFO - <BrokerConnection client_id=kafka-python-producer-21, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:13:52,476 - INFO - 成功插入 83 条记录到 public.logs_user_info_message
+2025-10-29 09:13:52,479 - INFO - <BrokerConnection client_id=kafka-python-producer-22, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:13:52,483 - INFO - <BrokerConnection client_id=kafka-python-producer-22, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:13:52,483 - INFO - <BrokerConnection client_id=kafka-python-producer-22, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:13:52,591 - INFO - <BrokerConnection client_id=kafka-python-producer-22, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:13:52,591 - INFO - <BrokerConnection client_id=kafka-python-producer-22, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:13:52,591 - INFO - <BrokerConnection client_id=kafka-python-producer-22, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:13:52,739 - INFO - Kafka发送完成 - 总条数: 83, 成功: 83, 失败: 0
+2025-10-29 09:13:52,743 - INFO - <BrokerConnection client_id=kafka-python-producer-22, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:14:32,899 - INFO - 成功插入 62 条记录到 public.logs_user_info_message
+2025-10-29 09:14:32,901 - INFO - <BrokerConnection client_id=kafka-python-producer-23, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:14:32,904 - INFO - <BrokerConnection client_id=kafka-python-producer-23, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:14:32,904 - INFO - <BrokerConnection client_id=kafka-python-producer-23, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:14:33,021 - INFO - <BrokerConnection client_id=kafka-python-producer-23, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:14:33,022 - INFO - <BrokerConnection client_id=kafka-python-producer-23, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:14:33,022 - INFO - <BrokerConnection client_id=kafka-python-producer-23, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:14:33,093 - INFO - Kafka发送完成 - 总条数: 62, 成功: 62, 失败: 0
+2025-10-29 09:14:33,094 - INFO - <BrokerConnection client_id=kafka-python-producer-23, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:15:13,226 - INFO - 成功插入 75 条记录到 public.logs_user_info_message
+2025-10-29 09:15:13,228 - INFO - <BrokerConnection client_id=kafka-python-producer-24, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:15:13,230 - INFO - <BrokerConnection client_id=kafka-python-producer-24, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:15:13,231 - INFO - <BrokerConnection client_id=kafka-python-producer-24, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:15:13,335 - INFO - <BrokerConnection client_id=kafka-python-producer-24, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:15:13,336 - INFO - <BrokerConnection client_id=kafka-python-producer-24, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:15:13,336 - INFO - <BrokerConnection client_id=kafka-python-producer-24, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:15:13,423 - INFO - Kafka发送完成 - 总条数: 75, 成功: 75, 失败: 0
+2025-10-29 09:15:13,423 - INFO - <BrokerConnection client_id=kafka-python-producer-24, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:15:53,633 - INFO - 成功插入 71 条记录到 public.logs_user_info_message
+2025-10-29 09:15:53,638 - INFO - <BrokerConnection client_id=kafka-python-producer-25, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:15:53,642 - INFO - <BrokerConnection client_id=kafka-python-producer-25, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:15:53,642 - INFO - <BrokerConnection client_id=kafka-python-producer-25, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:15:53,755 - INFO - <BrokerConnection client_id=kafka-python-producer-25, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:15:53,755 - INFO - <BrokerConnection client_id=kafka-python-producer-25, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:15:53,755 - INFO - <BrokerConnection client_id=kafka-python-producer-25, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:15:53,842 - INFO - Kafka发送完成 - 总条数: 71, 成功: 71, 失败: 0
+2025-10-29 09:15:53,842 - INFO - <BrokerConnection client_id=kafka-python-producer-25, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:16:43,986 - INFO - 成功插入 100 条记录到 public.logs_user_info_message
+2025-10-29 09:16:43,986 - INFO - <BrokerConnection client_id=kafka-python-producer-26, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:16:43,990 - INFO - <BrokerConnection client_id=kafka-python-producer-26, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:16:43,990 - INFO - <BrokerConnection client_id=kafka-python-producer-26, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:16:44,105 - INFO - <BrokerConnection client_id=kafka-python-producer-26, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:16:44,120 - INFO - <BrokerConnection client_id=kafka-python-producer-26, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:16:44,120 - INFO - <BrokerConnection client_id=kafka-python-producer-26, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:16:44,267 - INFO - Kafka发送完成 - 总条数: 100, 成功: 100, 失败: 0
+2025-10-29 09:16:44,267 - INFO - <BrokerConnection client_id=kafka-python-producer-26, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:17:24,438 - INFO - 成功插入 81 条记录到 public.logs_user_info_message
+2025-10-29 09:17:24,441 - INFO - <BrokerConnection client_id=kafka-python-producer-27, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:17:24,446 - INFO - <BrokerConnection client_id=kafka-python-producer-27, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:17:24,446 - INFO - <BrokerConnection client_id=kafka-python-producer-27, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:17:24,560 - INFO - <BrokerConnection client_id=kafka-python-producer-27, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:17:24,575 - INFO - <BrokerConnection client_id=kafka-python-producer-27, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:17:24,576 - INFO - <BrokerConnection client_id=kafka-python-producer-27, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:17:24,799 - INFO - Kafka发送完成 - 总条数: 81, 成功: 81, 失败: 0
+2025-10-29 09:17:24,802 - INFO - <BrokerConnection client_id=kafka-python-producer-27, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:18:04,991 - INFO - 成功插入 80 条记录到 public.logs_user_info_message
+2025-10-29 09:18:04,992 - INFO - <BrokerConnection client_id=kafka-python-producer-28, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:18:05,013 - INFO - <BrokerConnection client_id=kafka-python-producer-28, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:18:05,013 - INFO - <BrokerConnection client_id=kafka-python-producer-28, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:18:05,124 - INFO - <BrokerConnection client_id=kafka-python-producer-28, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:18:05,127 - INFO - <BrokerConnection client_id=kafka-python-producer-28, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:18:05,129 - INFO - <BrokerConnection client_id=kafka-python-producer-28, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:18:05,312 - INFO - Kafka发送完成 - 总条数: 80, 成功: 80, 失败: 0
+2025-10-29 09:18:05,312 - INFO - <BrokerConnection client_id=kafka-python-producer-28, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:18:45,508 - INFO - 成功插入 80 条记录到 public.logs_user_info_message
+2025-10-29 09:18:45,511 - INFO - <BrokerConnection client_id=kafka-python-producer-29, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:18:45,528 - INFO - <BrokerConnection client_id=kafka-python-producer-29, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:18:45,529 - INFO - <BrokerConnection client_id=kafka-python-producer-29, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:18:45,648 - INFO - <BrokerConnection client_id=kafka-python-producer-29, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:18:45,651 - INFO - <BrokerConnection client_id=kafka-python-producer-29, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:18:45,652 - INFO - <BrokerConnection client_id=kafka-python-producer-29, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:18:45,745 - INFO - Kafka发送完成 - 总条数: 80, 成功: 80, 失败: 0
+2025-10-29 09:18:45,745 - INFO - <BrokerConnection client_id=kafka-python-producer-29, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:19:33,991 - INFO - 成功插入 102 条记录到 public.logs_user_info_message
+2025-10-29 09:19:33,991 - INFO - <BrokerConnection client_id=kafka-python-producer-30, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:19:33,995 - INFO - <BrokerConnection client_id=kafka-python-producer-30, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:19:33,995 - INFO - <BrokerConnection client_id=kafka-python-producer-30, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:19:34,106 - INFO - <BrokerConnection client_id=kafka-python-producer-30, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:19:34,108 - INFO - <BrokerConnection client_id=kafka-python-producer-30, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:19:34,108 - INFO - <BrokerConnection client_id=kafka-python-producer-30, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:19:34,364 - INFO - Kafka发送完成 - 总条数: 102, 成功: 102, 失败: 0
+2025-10-29 09:19:34,364 - INFO - <BrokerConnection client_id=kafka-python-producer-30, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:20:14,545 - INFO - 成功插入 92 条记录到 public.logs_user_info_message
+2025-10-29 09:20:14,549 - INFO - <BrokerConnection client_id=kafka-python-producer-31, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:20:14,549 - INFO - <BrokerConnection client_id=kafka-python-producer-31, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:20:14,553 - INFO - <BrokerConnection client_id=kafka-python-producer-31, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:20:14,668 - INFO - <BrokerConnection client_id=kafka-python-producer-31, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:20:14,672 - INFO - <BrokerConnection client_id=kafka-python-producer-31, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:20:14,676 - INFO - <BrokerConnection client_id=kafka-python-producer-31, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:20:14,925 - INFO - Kafka发送完成 - 总条数: 92, 成功: 92, 失败: 0
+2025-10-29 09:20:14,925 - INFO - <BrokerConnection client_id=kafka-python-producer-31, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:20:55,143 - INFO - 成功插入 85 条记录到 public.logs_user_info_message
+2025-10-29 09:20:55,147 - INFO - <BrokerConnection client_id=kafka-python-producer-32, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:20:55,154 - INFO - <BrokerConnection client_id=kafka-python-producer-32, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:20:55,154 - INFO - <BrokerConnection client_id=kafka-python-producer-32, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:20:55,268 - INFO - <BrokerConnection client_id=kafka-python-producer-32, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:20:55,272 - INFO - <BrokerConnection client_id=kafka-python-producer-32, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:20:55,272 - INFO - <BrokerConnection client_id=kafka-python-producer-32, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:20:55,472 - INFO - Kafka发送完成 - 总条数: 85, 成功: 85, 失败: 0
+2025-10-29 09:20:55,472 - INFO - <BrokerConnection client_id=kafka-python-producer-32, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:21:35,704 - INFO - 成功插入 86 条记录到 public.logs_user_info_message
+2025-10-29 09:21:35,709 - INFO - <BrokerConnection client_id=kafka-python-producer-33, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:21:35,734 - INFO - <BrokerConnection client_id=kafka-python-producer-33, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:21:35,734 - INFO - <BrokerConnection client_id=kafka-python-producer-33, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:21:35,843 - INFO - <BrokerConnection client_id=kafka-python-producer-33, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:21:35,843 - INFO - <BrokerConnection client_id=kafka-python-producer-33, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:21:35,843 - INFO - <BrokerConnection client_id=kafka-python-producer-33, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:21:36,061 - INFO - Kafka发送完成 - 总条数: 86, 成功: 86, 失败: 0
+2025-10-29 09:21:36,061 - INFO - <BrokerConnection client_id=kafka-python-producer-33, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:22:16,276 - INFO - 成功插入 81 条记录到 public.logs_user_info_message
+2025-10-29 09:22:16,276 - INFO - <BrokerConnection client_id=kafka-python-producer-34, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:22:16,280 - INFO - <BrokerConnection client_id=kafka-python-producer-34, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:22:16,280 - INFO - <BrokerConnection client_id=kafka-python-producer-34, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:22:16,385 - INFO - <BrokerConnection client_id=kafka-python-producer-34, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:22:16,385 - INFO - <BrokerConnection client_id=kafka-python-producer-34, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:22:16,390 - INFO - <BrokerConnection client_id=kafka-python-producer-34, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:22:16,615 - INFO - Kafka发送完成 - 总条数: 81, 成功: 81, 失败: 0
+2025-10-29 09:22:16,619 - INFO - <BrokerConnection client_id=kafka-python-producer-34, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:22:56,812 - INFO - 成功插入 76 条记录到 public.logs_user_info_message
+2025-10-29 09:22:56,817 - INFO - <BrokerConnection client_id=kafka-python-producer-35, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:22:56,820 - INFO - <BrokerConnection client_id=kafka-python-producer-35, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:22:56,820 - INFO - <BrokerConnection client_id=kafka-python-producer-35, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:22:56,929 - INFO - <BrokerConnection client_id=kafka-python-producer-35, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:22:56,929 - INFO - <BrokerConnection client_id=kafka-python-producer-35, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:22:56,929 - INFO - <BrokerConnection client_id=kafka-python-producer-35, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:22:57,124 - INFO - Kafka发送完成 - 总条数: 76, 成功: 76, 失败: 0
+2025-10-29 09:22:57,124 - INFO - <BrokerConnection client_id=kafka-python-producer-35, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:23:37,362 - INFO - 成功插入 79 条记录到 public.logs_user_info_message
+2025-10-29 09:23:37,366 - INFO - <BrokerConnection client_id=kafka-python-producer-36, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:23:37,370 - INFO - <BrokerConnection client_id=kafka-python-producer-36, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:23:37,374 - INFO - <BrokerConnection client_id=kafka-python-producer-36, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:23:37,483 - INFO - <BrokerConnection client_id=kafka-python-producer-36, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:23:37,485 - INFO - <BrokerConnection client_id=kafka-python-producer-36, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:23:37,487 - INFO - <BrokerConnection client_id=kafka-python-producer-36, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:23:37,703 - INFO - Kafka发送完成 - 总条数: 79, 成功: 79, 失败: 0
+2025-10-29 09:23:37,706 - INFO - <BrokerConnection client_id=kafka-python-producer-36, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:24:17,904 - INFO - 成功插入 77 条记录到 public.logs_user_info_message
+2025-10-29 09:24:17,909 - INFO - <BrokerConnection client_id=kafka-python-producer-37, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:24:17,935 - INFO - <BrokerConnection client_id=kafka-python-producer-37, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:24:17,935 - INFO - <BrokerConnection client_id=kafka-python-producer-37, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:24:18,043 - INFO - <BrokerConnection client_id=kafka-python-producer-37, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:24:18,047 - INFO - <BrokerConnection client_id=kafka-python-producer-37, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:24:18,047 - INFO - <BrokerConnection client_id=kafka-python-producer-37, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:24:18,236 - INFO - Kafka发送完成 - 总条数: 77, 成功: 77, 失败: 0
+2025-10-29 09:24:18,236 - INFO - <BrokerConnection client_id=kafka-python-producer-37, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:25:36,642 - INFO - 成功插入 145 条记录到 public.logs_user_info_message
+2025-10-29 09:25:36,646 - INFO - <BrokerConnection client_id=kafka-python-producer-38, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:25:36,650 - INFO - <BrokerConnection client_id=kafka-python-producer-38, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:25:36,650 - INFO - <BrokerConnection client_id=kafka-python-producer-38, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:25:36,761 - INFO - <BrokerConnection client_id=kafka-python-producer-38, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:25:36,764 - INFO - <BrokerConnection client_id=kafka-python-producer-38, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:25:36,764 - INFO - <BrokerConnection client_id=kafka-python-producer-38, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:25:37,045 - INFO - Kafka发送完成 - 总条数: 145, 成功: 145, 失败: 0
+2025-10-29 09:25:37,045 - INFO - <BrokerConnection client_id=kafka-python-producer-38, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:26:17,214 - INFO - 成功插入 79 条记录到 public.logs_user_info_message
+2025-10-29 09:26:17,215 - INFO - <BrokerConnection client_id=kafka-python-producer-39, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:26:17,220 - INFO - <BrokerConnection client_id=kafka-python-producer-39, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:26:17,220 - INFO - <BrokerConnection client_id=kafka-python-producer-39, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:26:17,331 - INFO - <BrokerConnection client_id=kafka-python-producer-39, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:26:17,333 - INFO - <BrokerConnection client_id=kafka-python-producer-39, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:26:17,334 - INFO - <BrokerConnection client_id=kafka-python-producer-39, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:26:17,477 - INFO - Kafka发送完成 - 总条数: 79, 成功: 79, 失败: 0
+2025-10-29 09:26:17,477 - INFO - <BrokerConnection client_id=kafka-python-producer-39, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:26:57,703 - INFO - 成功插入 68 条记录到 public.logs_user_info_message
+2025-10-29 09:26:57,708 - INFO - <BrokerConnection client_id=kafka-python-producer-40, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:26:57,715 - INFO - <BrokerConnection client_id=kafka-python-producer-40, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:26:57,715 - INFO - <BrokerConnection client_id=kafka-python-producer-40, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:26:57,821 - INFO - <BrokerConnection client_id=kafka-python-producer-40, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:26:57,825 - INFO - <BrokerConnection client_id=kafka-python-producer-40, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:26:57,825 - INFO - <BrokerConnection client_id=kafka-python-producer-40, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:26:57,978 - INFO - Kafka发送完成 - 总条数: 68, 成功: 68, 失败: 0
+2025-10-29 09:26:57,978 - INFO - <BrokerConnection client_id=kafka-python-producer-40, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:27:38,143 - INFO - 成功插入 79 条记录到 public.logs_user_info_message
+2025-10-29 09:27:38,144 - INFO - <BrokerConnection client_id=kafka-python-producer-41, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:27:38,147 - INFO - <BrokerConnection client_id=kafka-python-producer-41, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:27:38,147 - INFO - <BrokerConnection client_id=kafka-python-producer-41, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:27:38,252 - INFO - <BrokerConnection client_id=kafka-python-producer-41, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:27:38,252 - INFO - <BrokerConnection client_id=kafka-python-producer-41, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:27:38,252 - INFO - <BrokerConnection client_id=kafka-python-producer-41, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:27:38,440 - INFO - Kafka发送完成 - 总条数: 79, 成功: 79, 失败: 0
+2025-10-29 09:27:38,440 - INFO - <BrokerConnection client_id=kafka-python-producer-41, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:28:18,639 - INFO - 成功插入 80 条记录到 public.logs_user_info_message
+2025-10-29 09:28:18,640 - INFO - <BrokerConnection client_id=kafka-python-producer-42, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:28:18,644 - INFO - <BrokerConnection client_id=kafka-python-producer-42, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:28:18,645 - INFO - <BrokerConnection client_id=kafka-python-producer-42, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:28:18,750 - INFO - <BrokerConnection client_id=kafka-python-producer-42, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:28:18,750 - INFO - <BrokerConnection client_id=kafka-python-producer-42, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:28:18,754 - INFO - <BrokerConnection client_id=kafka-python-producer-42, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:28:18,952 - INFO - Kafka发送完成 - 总条数: 80, 成功: 80, 失败: 0
+2025-10-29 09:28:18,952 - INFO - <BrokerConnection client_id=kafka-python-producer-42, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:29:01,208 - INFO - 成功插入 81 条记录到 public.logs_user_info_message
+2025-10-29 09:29:01,210 - INFO - <BrokerConnection client_id=kafka-python-producer-43, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:29:01,231 - INFO - <BrokerConnection client_id=kafka-python-producer-43, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:29:01,232 - INFO - <BrokerConnection client_id=kafka-python-producer-43, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:29:01,346 - INFO - <BrokerConnection client_id=kafka-python-producer-43, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:29:01,346 - INFO - <BrokerConnection client_id=kafka-python-producer-43, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:29:01,349 - INFO - <BrokerConnection client_id=kafka-python-producer-43, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:29:01,562 - INFO - Kafka发送完成 - 总条数: 81, 成功: 81, 失败: 0
+2025-10-29 09:29:01,562 - INFO - <BrokerConnection client_id=kafka-python-producer-43, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:29:41,714 - INFO - 成功插入 84 条记录到 public.logs_user_info_message
+2025-10-29 09:29:41,715 - INFO - <BrokerConnection client_id=kafka-python-producer-44, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:29:41,718 - INFO - <BrokerConnection client_id=kafka-python-producer-44, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:29:41,718 - INFO - <BrokerConnection client_id=kafka-python-producer-44, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:29:41,824 - INFO - <BrokerConnection client_id=kafka-python-producer-44, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:29:41,826 - INFO - <BrokerConnection client_id=kafka-python-producer-44, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:29:41,826 - INFO - <BrokerConnection client_id=kafka-python-producer-44, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:29:41,912 - INFO - Kafka发送完成 - 总条数: 84, 成功: 84, 失败: 0
+2025-10-29 09:29:41,913 - INFO - <BrokerConnection client_id=kafka-python-producer-44, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:30:22,081 - INFO - 成功插入 86 条记录到 public.logs_user_info_message
+2025-10-29 09:30:22,083 - INFO - <BrokerConnection client_id=kafka-python-producer-45, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:30:22,088 - INFO - <BrokerConnection client_id=kafka-python-producer-45, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:30:22,088 - INFO - <BrokerConnection client_id=kafka-python-producer-45, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:30:22,191 - INFO - <BrokerConnection client_id=kafka-python-producer-45, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:30:22,191 - INFO - <BrokerConnection client_id=kafka-python-producer-45, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:30:22,191 - INFO - <BrokerConnection client_id=kafka-python-producer-45, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:30:22,360 - INFO - Kafka发送完成 - 总条数: 86, 成功: 86, 失败: 0
+2025-10-29 09:30:22,361 - INFO - <BrokerConnection client_id=kafka-python-producer-45, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:31:02,521 - INFO - 成功插入 87 条记录到 public.logs_user_info_message
+2025-10-29 09:31:02,524 - INFO - <BrokerConnection client_id=kafka-python-producer-46, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:31:02,528 - INFO - <BrokerConnection client_id=kafka-python-producer-46, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:31:02,528 - INFO - <BrokerConnection client_id=kafka-python-producer-46, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:31:02,633 - INFO - <BrokerConnection client_id=kafka-python-producer-46, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:31:02,634 - INFO - <BrokerConnection client_id=kafka-python-producer-46, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:31:02,635 - INFO - <BrokerConnection client_id=kafka-python-producer-46, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:31:02,792 - INFO - Kafka发送完成 - 总条数: 87, 成功: 87, 失败: 0
+2025-10-29 09:31:02,793 - INFO - <BrokerConnection client_id=kafka-python-producer-46, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:31:54,971 - INFO - 成功插入 100 条记录到 public.logs_user_info_message
+2025-10-29 09:31:54,973 - INFO - <BrokerConnection client_id=kafka-python-producer-47, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:31:54,976 - INFO - <BrokerConnection client_id=kafka-python-producer-47, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:31:54,976 - INFO - <BrokerConnection client_id=kafka-python-producer-47, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:31:55,079 - INFO - <BrokerConnection client_id=kafka-python-producer-47, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:31:55,094 - INFO - <BrokerConnection client_id=kafka-python-producer-47, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:31:55,095 - INFO - <BrokerConnection client_id=kafka-python-producer-47, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:31:55,207 - INFO - Kafka发送完成 - 总条数: 100, 成功: 100, 失败: 0
+2025-10-29 09:31:55,208 - INFO - <BrokerConnection client_id=kafka-python-producer-47, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:32:35,373 - INFO - 成功插入 79 条记录到 public.logs_user_info_message
+2025-10-29 09:32:35,375 - INFO - <BrokerConnection client_id=kafka-python-producer-48, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:32:35,389 - INFO - <BrokerConnection client_id=kafka-python-producer-48, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:32:35,389 - INFO - <BrokerConnection client_id=kafka-python-producer-48, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:32:35,495 - INFO - <BrokerConnection client_id=kafka-python-producer-48, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:32:35,496 - INFO - <BrokerConnection client_id=kafka-python-producer-48, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:32:35,496 - INFO - <BrokerConnection client_id=kafka-python-producer-48, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:32:35,608 - INFO - Kafka发送完成 - 总条数: 79, 成功: 79, 失败: 0
+2025-10-29 09:32:35,609 - INFO - <BrokerConnection client_id=kafka-python-producer-48, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:33:15,726 - INFO - 成功插入 83 条记录到 public.logs_user_info_message
+2025-10-29 09:33:15,727 - INFO - <BrokerConnection client_id=kafka-python-producer-49, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:33:15,730 - INFO - <BrokerConnection client_id=kafka-python-producer-49, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:33:15,730 - INFO - <BrokerConnection client_id=kafka-python-producer-49, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:33:15,839 - INFO - <BrokerConnection client_id=kafka-python-producer-49, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:33:15,840 - INFO - <BrokerConnection client_id=kafka-python-producer-49, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:33:15,841 - INFO - <BrokerConnection client_id=kafka-python-producer-49, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:33:15,920 - INFO - Kafka发送完成 - 总条数: 83, 成功: 83, 失败: 0
+2025-10-29 09:33:15,921 - INFO - <BrokerConnection client_id=kafka-python-producer-49, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:33:56,019 - INFO - 成功插入 74 条记录到 public.logs_user_info_message
+2025-10-29 09:33:56,020 - INFO - <BrokerConnection client_id=kafka-python-producer-50, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:33:56,023 - INFO - <BrokerConnection client_id=kafka-python-producer-50, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:33:56,023 - INFO - <BrokerConnection client_id=kafka-python-producer-50, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:33:56,134 - INFO - <BrokerConnection client_id=kafka-python-producer-50, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:33:56,135 - INFO - <BrokerConnection client_id=kafka-python-producer-50, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:33:56,135 - INFO - <BrokerConnection client_id=kafka-python-producer-50, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:33:56,214 - INFO - Kafka发送完成 - 总条数: 74, 成功: 74, 失败: 0
+2025-10-29 09:33:56,215 - INFO - <BrokerConnection client_id=kafka-python-producer-50, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:34:38,402 - INFO - 成功插入 95 条记录到 public.logs_user_info_message
+2025-10-29 09:34:38,404 - INFO - <BrokerConnection client_id=kafka-python-producer-51, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:34:38,407 - INFO - <BrokerConnection client_id=kafka-python-producer-51, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:34:38,407 - INFO - <BrokerConnection client_id=kafka-python-producer-51, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:34:38,514 - INFO - <BrokerConnection client_id=kafka-python-producer-51, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:34:38,516 - INFO - <BrokerConnection client_id=kafka-python-producer-51, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:34:38,517 - INFO - <BrokerConnection client_id=kafka-python-producer-51, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:34:38,615 - INFO - Kafka发送完成 - 总条数: 95, 成功: 95, 失败: 0
+2025-10-29 09:34:38,615 - INFO - <BrokerConnection client_id=kafka-python-producer-51, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:35:18,743 - INFO - 成功插入 76 条记录到 public.logs_user_info_message
+2025-10-29 09:35:18,745 - INFO - <BrokerConnection client_id=kafka-python-producer-52, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:35:18,766 - INFO - <BrokerConnection client_id=kafka-python-producer-52, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:35:18,766 - INFO - <BrokerConnection client_id=kafka-python-producer-52, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:35:18,872 - INFO - <BrokerConnection client_id=kafka-python-producer-52, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:35:18,886 - INFO - <BrokerConnection client_id=kafka-python-producer-52, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:35:18,886 - INFO - <BrokerConnection client_id=kafka-python-producer-52, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:35:18,977 - INFO - Kafka发送完成 - 总条数: 76, 成功: 76, 失败: 0
+2025-10-29 09:35:18,977 - INFO - <BrokerConnection client_id=kafka-python-producer-52, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:35:59,101 - INFO - 成功插入 77 条记录到 public.logs_user_info_message
+2025-10-29 09:35:59,103 - INFO - <BrokerConnection client_id=kafka-python-producer-53, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:35:59,105 - INFO - <BrokerConnection client_id=kafka-python-producer-53, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:35:59,105 - INFO - <BrokerConnection client_id=kafka-python-producer-53, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:35:59,214 - INFO - <BrokerConnection client_id=kafka-python-producer-53, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:35:59,216 - INFO - <BrokerConnection client_id=kafka-python-producer-53, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:35:59,216 - INFO - <BrokerConnection client_id=kafka-python-producer-53, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:35:59,298 - INFO - Kafka发送完成 - 总条数: 77, 成功: 77, 失败: 0
+2025-10-29 09:35:59,298 - INFO - <BrokerConnection client_id=kafka-python-producer-53, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:36:39,485 - INFO - 成功插入 87 条记录到 public.logs_user_info_message
+2025-10-29 09:36:39,487 - INFO - <BrokerConnection client_id=kafka-python-producer-54, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:36:39,489 - INFO - <BrokerConnection client_id=kafka-python-producer-54, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:36:39,489 - INFO - <BrokerConnection client_id=kafka-python-producer-54, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:36:39,591 - INFO - <BrokerConnection client_id=kafka-python-producer-54, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:36:39,591 - INFO - <BrokerConnection client_id=kafka-python-producer-54, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:36:39,591 - INFO - <BrokerConnection client_id=kafka-python-producer-54, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:36:39,781 - INFO - Kafka发送完成 - 总条数: 87, 成功: 87, 失败: 0
+2025-10-29 09:36:39,781 - INFO - <BrokerConnection client_id=kafka-python-producer-54, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:37:21,988 - INFO - 成功插入 95 条记录到 public.logs_user_info_message
+2025-10-29 09:37:21,989 - INFO - <BrokerConnection client_id=kafka-python-producer-55, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:37:21,993 - INFO - <BrokerConnection client_id=kafka-python-producer-55, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:37:21,993 - INFO - <BrokerConnection client_id=kafka-python-producer-55, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:37:22,096 - INFO - <BrokerConnection client_id=kafka-python-producer-55, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:37:22,099 - INFO - <BrokerConnection client_id=kafka-python-producer-55, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:37:22,099 - INFO - <BrokerConnection client_id=kafka-python-producer-55, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:37:22,204 - INFO - Kafka发送完成 - 总条数: 95, 成功: 95, 失败: 0
+2025-10-29 09:37:22,204 - INFO - <BrokerConnection client_id=kafka-python-producer-55, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:38:02,360 - INFO - 成功插入 91 条记录到 public.logs_user_info_message
+2025-10-29 09:38:02,362 - INFO - <BrokerConnection client_id=kafka-python-producer-56, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:38:02,364 - INFO - <BrokerConnection client_id=kafka-python-producer-56, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:38:02,365 - INFO - <BrokerConnection client_id=kafka-python-producer-56, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:38:02,471 - INFO - <BrokerConnection client_id=kafka-python-producer-56, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:38:02,472 - INFO - <BrokerConnection client_id=kafka-python-producer-56, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:38:02,472 - INFO - <BrokerConnection client_id=kafka-python-producer-56, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:38:02,571 - INFO - Kafka发送完成 - 总条数: 91, 成功: 91, 失败: 0
+2025-10-29 09:38:02,572 - INFO - <BrokerConnection client_id=kafka-python-producer-56, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:38:42,685 - INFO - 成功插入 78 条记录到 public.logs_user_info_message
+2025-10-29 09:38:42,686 - INFO - <BrokerConnection client_id=kafka-python-producer-57, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:38:42,689 - INFO - <BrokerConnection client_id=kafka-python-producer-57, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:38:42,689 - INFO - <BrokerConnection client_id=kafka-python-producer-57, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:38:42,794 - INFO - <BrokerConnection client_id=kafka-python-producer-57, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:38:42,795 - INFO - <BrokerConnection client_id=kafka-python-producer-57, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:38:42,795 - INFO - <BrokerConnection client_id=kafka-python-producer-57, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:38:42,884 - INFO - Kafka发送完成 - 总条数: 78, 成功: 78, 失败: 0
+2025-10-29 09:38:42,884 - INFO - <BrokerConnection client_id=kafka-python-producer-57, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:39:23,000 - INFO - 成功插入 82 条记录到 public.logs_user_info_message
+2025-10-29 09:39:23,001 - INFO - <BrokerConnection client_id=kafka-python-producer-58, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:39:23,018 - INFO - <BrokerConnection client_id=kafka-python-producer-58, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:39:23,018 - INFO - <BrokerConnection client_id=kafka-python-producer-58, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:39:23,135 - INFO - <BrokerConnection client_id=kafka-python-producer-58, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:39:23,149 - INFO - <BrokerConnection client_id=kafka-python-producer-58, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:39:23,150 - INFO - <BrokerConnection client_id=kafka-python-producer-58, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:39:23,255 - INFO - Kafka发送完成 - 总条数: 82, 成功: 82, 失败: 0
+2025-10-29 09:39:23,256 - INFO - <BrokerConnection client_id=kafka-python-producer-58, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:40:33,491 - INFO - 成功插入 133 条记录到 public.logs_user_info_message
+2025-10-29 09:40:33,494 - INFO - <BrokerConnection client_id=kafka-python-producer-59, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:40:33,496 - INFO - <BrokerConnection client_id=kafka-python-producer-59, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:40:33,497 - INFO - <BrokerConnection client_id=kafka-python-producer-59, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:40:33,612 - INFO - <BrokerConnection client_id=kafka-python-producer-59, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:40:33,613 - INFO - <BrokerConnection client_id=kafka-python-producer-59, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:40:33,614 - INFO - <BrokerConnection client_id=kafka-python-producer-59, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:40:33,762 - INFO - Kafka发送完成 - 总条数: 133, 成功: 133, 失败: 0
+2025-10-29 09:40:33,762 - INFO - <BrokerConnection client_id=kafka-python-producer-59, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:41:13,912 - INFO - 成功插入 88 条记录到 public.logs_user_info_message
+2025-10-29 09:41:13,913 - INFO - <BrokerConnection client_id=kafka-python-producer-60, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:41:13,916 - INFO - <BrokerConnection client_id=kafka-python-producer-60, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:41:13,916 - INFO - <BrokerConnection client_id=kafka-python-producer-60, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:41:14,034 - INFO - <BrokerConnection client_id=kafka-python-producer-60, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:41:14,036 - INFO - <BrokerConnection client_id=kafka-python-producer-60, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:41:14,036 - INFO - <BrokerConnection client_id=kafka-python-producer-60, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:41:14,126 - INFO - Kafka发送完成 - 总条数: 88, 成功: 88, 失败: 0
+2025-10-29 09:41:14,126 - INFO - <BrokerConnection client_id=kafka-python-producer-60, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:41:54,292 - INFO - 成功插入 72 条记录到 public.logs_user_info_message
+2025-10-29 09:41:54,295 - INFO - <BrokerConnection client_id=kafka-python-producer-61, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:41:54,297 - INFO - <BrokerConnection client_id=kafka-python-producer-61, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:41:54,298 - INFO - <BrokerConnection client_id=kafka-python-producer-61, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:41:54,413 - INFO - <BrokerConnection client_id=kafka-python-producer-61, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:41:54,428 - INFO - <BrokerConnection client_id=kafka-python-producer-61, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:41:54,428 - INFO - <BrokerConnection client_id=kafka-python-producer-61, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:41:54,531 - INFO - Kafka发送完成 - 总条数: 72, 成功: 72, 失败: 0
+2025-10-29 09:41:54,532 - INFO - <BrokerConnection client_id=kafka-python-producer-61, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:42:34,715 - INFO - 成功插入 81 条记录到 public.logs_user_info_message
+2025-10-29 09:42:34,718 - INFO - <BrokerConnection client_id=kafka-python-producer-62, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:42:34,720 - INFO - <BrokerConnection client_id=kafka-python-producer-62, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:42:34,721 - INFO - <BrokerConnection client_id=kafka-python-producer-62, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:42:34,824 - INFO - <BrokerConnection client_id=kafka-python-producer-62, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:42:34,824 - INFO - <BrokerConnection client_id=kafka-python-producer-62, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:42:34,824 - INFO - <BrokerConnection client_id=kafka-python-producer-62, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:42:34,987 - INFO - Kafka发送完成 - 总条数: 81, 成功: 81, 失败: 0
+2025-10-29 09:42:34,987 - INFO - <BrokerConnection client_id=kafka-python-producer-62, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:43:21,233 - INFO - 成功插入 85 条记录到 public.logs_user_info_message
+2025-10-29 09:43:21,237 - INFO - <BrokerConnection client_id=kafka-python-producer-63, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:43:21,241 - INFO - <BrokerConnection client_id=kafka-python-producer-63, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:43:21,241 - INFO - <BrokerConnection client_id=kafka-python-producer-63, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:43:21,356 - INFO - <BrokerConnection client_id=kafka-python-producer-63, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:43:21,356 - INFO - <BrokerConnection client_id=kafka-python-producer-63, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:43:21,356 - INFO - <BrokerConnection client_id=kafka-python-producer-63, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:43:21,588 - INFO - Kafka发送完成 - 总条数: 85, 成功: 85, 失败: 0
+2025-10-29 09:43:21,588 - INFO - <BrokerConnection client_id=kafka-python-producer-63, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:44:01,782 - INFO - 成功插入 71 条记录到 public.logs_user_info_message
+2025-10-29 09:44:01,784 - INFO - <BrokerConnection client_id=kafka-python-producer-64, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:44:01,788 - INFO - <BrokerConnection client_id=kafka-python-producer-64, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:44:01,789 - INFO - <BrokerConnection client_id=kafka-python-producer-64, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:44:01,898 - INFO - <BrokerConnection client_id=kafka-python-producer-64, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:44:01,899 - INFO - <BrokerConnection client_id=kafka-python-producer-64, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:44:01,900 - INFO - <BrokerConnection client_id=kafka-python-producer-64, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:44:02,032 - INFO - Kafka发送完成 - 总条数: 71, 成功: 71, 失败: 0
+2025-10-29 09:44:02,034 - INFO - <BrokerConnection client_id=kafka-python-producer-64, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:44:42,236 - INFO - 成功插入 75 条记录到 public.logs_user_info_message
+2025-10-29 09:44:42,239 - INFO - <BrokerConnection client_id=kafka-python-producer-65, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:44:42,243 - INFO - <BrokerConnection client_id=kafka-python-producer-65, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:44:42,247 - INFO - <BrokerConnection client_id=kafka-python-producer-65, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:44:42,353 - INFO - <BrokerConnection client_id=kafka-python-producer-65, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:44:42,353 - INFO - <BrokerConnection client_id=kafka-python-producer-65, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:44:42,353 - INFO - <BrokerConnection client_id=kafka-python-producer-65, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:44:42,502 - INFO - Kafka发送完成 - 总条数: 75, 成功: 75, 失败: 0
+2025-10-29 09:44:42,502 - INFO - <BrokerConnection client_id=kafka-python-producer-65, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:45:22,611 - INFO - 成功插入 94 条记录到 public.logs_user_info_message
+2025-10-29 09:45:22,614 - INFO - <BrokerConnection client_id=kafka-python-producer-66, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:45:22,621 - INFO - <BrokerConnection client_id=kafka-python-producer-66, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:45:22,621 - INFO - <BrokerConnection client_id=kafka-python-producer-66, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:45:22,734 - INFO - <BrokerConnection client_id=kafka-python-producer-66, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:45:22,738 - INFO - <BrokerConnection client_id=kafka-python-producer-66, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:45:22,738 - INFO - <BrokerConnection client_id=kafka-python-producer-66, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:45:22,877 - INFO - Kafka发送完成 - 总条数: 94, 成功: 94, 失败: 0
+2025-10-29 09:45:22,877 - INFO - <BrokerConnection client_id=kafka-python-producer-66, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:46:23,053 - INFO - 成功插入 108 条记录到 public.logs_user_info_message
+2025-10-29 09:46:23,055 - INFO - <BrokerConnection client_id=kafka-python-producer-67, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:46:23,057 - INFO - <BrokerConnection client_id=kafka-python-producer-67, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:46:23,058 - INFO - <BrokerConnection client_id=kafka-python-producer-67, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:46:23,161 - INFO - <BrokerConnection client_id=kafka-python-producer-67, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:46:23,161 - INFO - <BrokerConnection client_id=kafka-python-producer-67, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:46:23,162 - INFO - <BrokerConnection client_id=kafka-python-producer-67, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:46:23,282 - INFO - Kafka发送完成 - 总条数: 108, 成功: 108, 失败: 0
+2025-10-29 09:46:23,283 - INFO - <BrokerConnection client_id=kafka-python-producer-67, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:47:03,373 - INFO - 成功插入 89 条记录到 public.logs_user_info_message
+2025-10-29 09:47:03,374 - INFO - <BrokerConnection client_id=kafka-python-producer-68, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:47:03,376 - INFO - <BrokerConnection client_id=kafka-python-producer-68, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:47:03,376 - INFO - <BrokerConnection client_id=kafka-python-producer-68, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:47:03,489 - INFO - <BrokerConnection client_id=kafka-python-producer-68, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:47:03,490 - INFO - <BrokerConnection client_id=kafka-python-producer-68, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:47:03,491 - INFO - <BrokerConnection client_id=kafka-python-producer-68, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:47:03,588 - INFO - Kafka发送完成 - 总条数: 89, 成功: 89, 失败: 0
+2025-10-29 09:47:03,589 - INFO - <BrokerConnection client_id=kafka-python-producer-68, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:47:43,701 - INFO - 成功插入 73 条记录到 public.logs_user_info_message
+2025-10-29 09:47:43,702 - INFO - <BrokerConnection client_id=kafka-python-producer-69, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:47:43,707 - INFO - <BrokerConnection client_id=kafka-python-producer-69, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:47:43,707 - INFO - <BrokerConnection client_id=kafka-python-producer-69, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:47:43,811 - INFO - <BrokerConnection client_id=kafka-python-producer-69, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:47:43,812 - INFO - <BrokerConnection client_id=kafka-python-producer-69, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:47:43,812 - INFO - <BrokerConnection client_id=kafka-python-producer-69, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:47:43,896 - INFO - Kafka发送完成 - 总条数: 73, 成功: 73, 失败: 0
+2025-10-29 09:47:43,897 - INFO - <BrokerConnection client_id=kafka-python-producer-69, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:48:23,995 - INFO - 成功插入 71 条记录到 public.logs_user_info_message
+2025-10-29 09:48:23,996 - INFO - <BrokerConnection client_id=kafka-python-producer-70, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:48:23,999 - INFO - <BrokerConnection client_id=kafka-python-producer-70, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:48:23,999 - INFO - <BrokerConnection client_id=kafka-python-producer-70, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:48:24,114 - INFO - <BrokerConnection client_id=kafka-python-producer-70, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:48:24,117 - INFO - <BrokerConnection client_id=kafka-python-producer-70, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:48:24,118 - INFO - <BrokerConnection client_id=kafka-python-producer-70, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:48:24,199 - INFO - Kafka发送完成 - 总条数: 71, 成功: 71, 失败: 0
+2025-10-29 09:48:24,200 - INFO - <BrokerConnection client_id=kafka-python-producer-70, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:49:38,415 - INFO - 成功插入 126 条记录到 public.logs_user_info_message
+2025-10-29 09:49:38,419 - INFO - <BrokerConnection client_id=kafka-python-producer-71, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:49:38,422 - INFO - <BrokerConnection client_id=kafka-python-producer-71, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:49:38,422 - INFO - <BrokerConnection client_id=kafka-python-producer-71, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:49:38,530 - INFO - <BrokerConnection client_id=kafka-python-producer-71, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:49:38,532 - INFO - <BrokerConnection client_id=kafka-python-producer-71, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:49:38,532 - INFO - <BrokerConnection client_id=kafka-python-producer-71, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:49:38,776 - INFO - Kafka发送完成 - 总条数: 126, 成功: 126, 失败: 0
+2025-10-29 09:49:38,777 - INFO - <BrokerConnection client_id=kafka-python-producer-71, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:50:18,936 - INFO - 成功插入 81 条记录到 public.logs_user_info_message
+2025-10-29 09:50:18,939 - INFO - <BrokerConnection client_id=kafka-python-producer-72, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:50:18,943 - INFO - <BrokerConnection client_id=kafka-python-producer-72, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:50:18,943 - INFO - <BrokerConnection client_id=kafka-python-producer-72, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:50:19,049 - INFO - <BrokerConnection client_id=kafka-python-producer-72, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:50:19,050 - INFO - <BrokerConnection client_id=kafka-python-producer-72, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:50:19,050 - INFO - <BrokerConnection client_id=kafka-python-producer-72, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:50:19,206 - INFO - Kafka发送完成 - 总条数: 81, 成功: 81, 失败: 0
+2025-10-29 09:50:19,207 - INFO - <BrokerConnection client_id=kafka-python-producer-72, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:50:59,371 - INFO - 成功插入 73 条记录到 public.logs_user_info_message
+2025-10-29 09:50:59,373 - INFO - <BrokerConnection client_id=kafka-python-producer-73, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:50:59,377 - INFO - <BrokerConnection client_id=kafka-python-producer-73, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:50:59,377 - INFO - <BrokerConnection client_id=kafka-python-producer-73, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:50:59,493 - INFO - <BrokerConnection client_id=kafka-python-producer-73, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:50:59,495 - INFO - <BrokerConnection client_id=kafka-python-producer-73, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:50:59,495 - INFO - <BrokerConnection client_id=kafka-python-producer-73, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:50:59,631 - INFO - Kafka发送完成 - 总条数: 73, 成功: 73, 失败: 0
+2025-10-29 09:50:59,631 - INFO - <BrokerConnection client_id=kafka-python-producer-73, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:51:39,817 - INFO - 成功插入 80 条记录到 public.logs_user_info_message
+2025-10-29 09:51:39,820 - INFO - <BrokerConnection client_id=kafka-python-producer-74, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:51:39,824 - INFO - <BrokerConnection client_id=kafka-python-producer-74, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:51:39,824 - INFO - <BrokerConnection client_id=kafka-python-producer-74, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:51:39,938 - INFO - <BrokerConnection client_id=kafka-python-producer-74, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:51:39,938 - INFO - <BrokerConnection client_id=kafka-python-producer-74, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:51:39,938 - INFO - <BrokerConnection client_id=kafka-python-producer-74, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:51:40,332 - INFO - Kafka发送完成 - 总条数: 80, 成功: 80, 失败: 0
+2025-10-29 09:51:40,336 - INFO - <BrokerConnection client_id=kafka-python-producer-74, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:52:38,579 - INFO - 成功插入 109 条记录到 public.logs_user_info_message
+2025-10-29 09:52:38,597 - INFO - <BrokerConnection client_id=kafka-python-producer-75, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:52:38,604 - INFO - <BrokerConnection client_id=kafka-python-producer-75, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:52:38,604 - INFO - <BrokerConnection client_id=kafka-python-producer-75, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:52:38,719 - INFO - <BrokerConnection client_id=kafka-python-producer-75, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:52:38,719 - INFO - <BrokerConnection client_id=kafka-python-producer-75, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:52:38,723 - INFO - <BrokerConnection client_id=kafka-python-producer-75, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:52:38,959 - INFO - Kafka发送完成 - 总条数: 109, 成功: 109, 失败: 0
+2025-10-29 09:52:38,962 - INFO - <BrokerConnection client_id=kafka-python-producer-75, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:53:19,115 - INFO - 成功插入 68 条记录到 public.logs_user_info_message
+2025-10-29 09:53:19,118 - INFO - <BrokerConnection client_id=kafka-python-producer-76, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:53:19,121 - INFO - <BrokerConnection client_id=kafka-python-producer-76, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:53:19,122 - INFO - <BrokerConnection client_id=kafka-python-producer-76, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:53:19,231 - INFO - <BrokerConnection client_id=kafka-python-producer-76, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:53:19,245 - INFO - <BrokerConnection client_id=kafka-python-producer-76, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:53:19,245 - INFO - <BrokerConnection client_id=kafka-python-producer-76, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:53:19,318 - INFO - Kafka发送完成 - 总条数: 68, 成功: 68, 失败: 0
+2025-10-29 09:53:19,318 - INFO - <BrokerConnection client_id=kafka-python-producer-76, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:53:59,486 - INFO - 成功插入 78 条记录到 public.logs_user_info_message
+2025-10-29 09:53:59,488 - INFO - <BrokerConnection client_id=kafka-python-producer-77, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:53:59,492 - INFO - <BrokerConnection client_id=kafka-python-producer-77, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:53:59,492 - INFO - <BrokerConnection client_id=kafka-python-producer-77, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:53:59,601 - INFO - <BrokerConnection client_id=kafka-python-producer-77, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:53:59,603 - INFO - <BrokerConnection client_id=kafka-python-producer-77, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:53:59,603 - INFO - <BrokerConnection client_id=kafka-python-producer-77, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:53:59,685 - INFO - Kafka发送完成 - 总条数: 78, 成功: 78, 失败: 0
+2025-10-29 09:53:59,685 - INFO - <BrokerConnection client_id=kafka-python-producer-77, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:54:39,917 - INFO - 成功插入 86 条记录到 public.logs_user_info_message
+2025-10-29 09:54:39,919 - INFO - <BrokerConnection client_id=kafka-python-producer-78, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:54:39,922 - INFO - <BrokerConnection client_id=kafka-python-producer-78, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:54:39,922 - INFO - <BrokerConnection client_id=kafka-python-producer-78, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:54:40,023 - INFO - <BrokerConnection client_id=kafka-python-producer-78, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:54:40,026 - INFO - <BrokerConnection client_id=kafka-python-producer-78, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:54:40,027 - INFO - <BrokerConnection client_id=kafka-python-producer-78, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:54:40,129 - INFO - Kafka发送完成 - 总条数: 86, 成功: 86, 失败: 0
+2025-10-29 09:54:40,130 - INFO - <BrokerConnection client_id=kafka-python-producer-78, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:55:20,228 - INFO - 成功插入 93 条记录到 public.logs_user_info_message
+2025-10-29 09:55:20,230 - INFO - <BrokerConnection client_id=kafka-python-producer-79, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:55:20,232 - INFO - <BrokerConnection client_id=kafka-python-producer-79, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:55:20,234 - INFO - <BrokerConnection client_id=kafka-python-producer-79, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:55:20,342 - INFO - <BrokerConnection client_id=kafka-python-producer-79, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:55:20,343 - INFO - <BrokerConnection client_id=kafka-python-producer-79, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:55:20,343 - INFO - <BrokerConnection client_id=kafka-python-producer-79, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:55:20,450 - INFO - Kafka发送完成 - 总条数: 93, 成功: 93, 失败: 0
+2025-10-29 09:55:20,450 - INFO - <BrokerConnection client_id=kafka-python-producer-79, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:56:18,664 - INFO - 成功插入 121 条记录到 public.logs_user_info_message
+2025-10-29 09:56:18,668 - INFO - <BrokerConnection client_id=kafka-python-producer-80, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:56:18,671 - INFO - <BrokerConnection client_id=kafka-python-producer-80, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:56:18,671 - INFO - <BrokerConnection client_id=kafka-python-producer-80, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:56:18,783 - INFO - <BrokerConnection client_id=kafka-python-producer-80, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:56:18,784 - INFO - <BrokerConnection client_id=kafka-python-producer-80, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:56:18,784 - INFO - <BrokerConnection client_id=kafka-python-producer-80, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:56:18,894 - INFO - Kafka发送完成 - 总条数: 121, 成功: 121, 失败: 0
+2025-10-29 09:56:18,894 - INFO - <BrokerConnection client_id=kafka-python-producer-80, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:56:59,022 - INFO - 成功插入 83 条记录到 public.logs_user_info_message
+2025-10-29 09:56:59,023 - INFO - <BrokerConnection client_id=kafka-python-producer-81, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:56:59,025 - INFO - <BrokerConnection client_id=kafka-python-producer-81, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:56:59,026 - INFO - <BrokerConnection client_id=kafka-python-producer-81, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:56:59,134 - INFO - <BrokerConnection client_id=kafka-python-producer-81, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:56:59,149 - INFO - <BrokerConnection client_id=kafka-python-producer-81, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:56:59,149 - INFO - <BrokerConnection client_id=kafka-python-producer-81, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:56:59,236 - INFO - Kafka发送完成 - 总条数: 83, 成功: 83, 失败: 0
+2025-10-29 09:56:59,236 - INFO - <BrokerConnection client_id=kafka-python-producer-81, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:57:39,385 - INFO - 成功插入 84 条记录到 public.logs_user_info_message
+2025-10-29 09:57:39,386 - INFO - <BrokerConnection client_id=kafka-python-producer-82, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:57:39,393 - INFO - <BrokerConnection client_id=kafka-python-producer-82, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:57:39,393 - INFO - <BrokerConnection client_id=kafka-python-producer-82, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:57:39,503 - INFO - <BrokerConnection client_id=kafka-python-producer-82, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:57:39,506 - INFO - <BrokerConnection client_id=kafka-python-producer-82, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:57:39,506 - INFO - <BrokerConnection client_id=kafka-python-producer-82, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:57:39,676 - INFO - Kafka发送完成 - 总条数: 84, 成功: 84, 失败: 0
+2025-10-29 09:57:39,676 - INFO - <BrokerConnection client_id=kafka-python-producer-82, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:58:19,872 - INFO - 成功插入 81 条记录到 public.logs_user_info_message
+2025-10-29 09:58:19,876 - INFO - <BrokerConnection client_id=kafka-python-producer-83, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:58:19,880 - INFO - <BrokerConnection client_id=kafka-python-producer-83, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:58:19,880 - INFO - <BrokerConnection client_id=kafka-python-producer-83, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:58:19,990 - INFO - <BrokerConnection client_id=kafka-python-producer-83, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:58:19,993 - INFO - <BrokerConnection client_id=kafka-python-producer-83, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:58:19,993 - INFO - <BrokerConnection client_id=kafka-python-producer-83, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:58:20,176 - INFO - Kafka发送完成 - 总条数: 81, 成功: 81, 失败: 0
+2025-10-29 09:58:20,176 - INFO - <BrokerConnection client_id=kafka-python-producer-83, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:59:00,344 - INFO - 成功插入 85 条记录到 public.logs_user_info_message
+2025-10-29 09:59:00,346 - INFO - <BrokerConnection client_id=kafka-python-producer-84, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:59:00,361 - INFO - <BrokerConnection client_id=kafka-python-producer-84, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:59:00,361 - INFO - <BrokerConnection client_id=kafka-python-producer-84, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:59:00,467 - INFO - <BrokerConnection client_id=kafka-python-producer-84, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:59:00,468 - INFO - <BrokerConnection client_id=kafka-python-producer-84, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:59:00,469 - INFO - <BrokerConnection client_id=kafka-python-producer-84, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:59:00,561 - INFO - Kafka发送完成 - 总条数: 85, 成功: 85, 失败: 0
+2025-10-29 09:59:00,561 - INFO - <BrokerConnection client_id=kafka-python-producer-84, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:59:40,764 - INFO - 成功插入 84 条记录到 public.logs_user_info_message
+2025-10-29 09:59:40,790 - INFO - <BrokerConnection client_id=kafka-python-producer-85, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:59:40,794 - INFO - <BrokerConnection client_id=kafka-python-producer-85, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 09:59:40,795 - INFO - <BrokerConnection client_id=kafka-python-producer-85, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:59:40,905 - INFO - <BrokerConnection client_id=kafka-python-producer-85, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 09:59:40,907 - INFO - <BrokerConnection client_id=kafka-python-producer-85, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 09:59:40,907 - INFO - <BrokerConnection client_id=kafka-python-producer-85, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 09:59:41,121 - INFO - Kafka发送完成 - 总条数: 84, 成功: 84, 失败: 0
+2025-10-29 09:59:41,123 - INFO - <BrokerConnection client_id=kafka-python-producer-85, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 10:00:21,256 - INFO - 成功插入 81 条记录到 public.logs_user_info_message
+2025-10-29 10:00:21,258 - INFO - <BrokerConnection client_id=kafka-python-producer-86, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 10:00:21,278 - INFO - <BrokerConnection client_id=kafka-python-producer-86, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 10:00:21,278 - INFO - <BrokerConnection client_id=kafka-python-producer-86, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 10:00:21,382 - INFO - <BrokerConnection client_id=kafka-python-producer-86, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 10:00:21,383 - INFO - <BrokerConnection client_id=kafka-python-producer-86, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 10:00:21,383 - INFO - <BrokerConnection client_id=kafka-python-producer-86, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 10:00:21,472 - INFO - Kafka发送完成 - 总条数: 81, 成功: 81, 失败: 0
+2025-10-29 10:00:21,473 - INFO - <BrokerConnection client_id=kafka-python-producer-86, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 10:01:01,558 - INFO - 成功插入 77 条记录到 public.logs_user_info_message
+2025-10-29 10:01:01,560 - INFO - <BrokerConnection client_id=kafka-python-producer-87, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 10:01:01,562 - INFO - <BrokerConnection client_id=kafka-python-producer-87, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 10:01:01,562 - INFO - <BrokerConnection client_id=kafka-python-producer-87, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 10:01:01,674 - INFO - <BrokerConnection client_id=kafka-python-producer-87, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 10:01:01,689 - INFO - <BrokerConnection client_id=kafka-python-producer-87, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 10:01:01,689 - INFO - <BrokerConnection client_id=kafka-python-producer-87, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 10:01:01,771 - INFO - Kafka发送完成 - 总条数: 77, 成功: 77, 失败: 0
+2025-10-29 10:01:01,771 - INFO - <BrokerConnection client_id=kafka-python-producer-87, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 10:01:53,970 - INFO - 成功插入 103 条记录到 public.logs_user_info_message
+2025-10-29 10:01:53,971 - INFO - <BrokerConnection client_id=kafka-python-producer-88, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 10:01:53,995 - INFO - <BrokerConnection client_id=kafka-python-producer-88, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 10:01:53,996 - INFO - <BrokerConnection client_id=kafka-python-producer-88, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 10:01:54,099 - INFO - <BrokerConnection client_id=kafka-python-producer-88, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 10:01:54,101 - INFO - <BrokerConnection client_id=kafka-python-producer-88, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 10:01:54,101 - INFO - <BrokerConnection client_id=kafka-python-producer-88, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 10:01:54,205 - INFO - Kafka发送完成 - 总条数: 103, 成功: 103, 失败: 0
+2025-10-29 10:01:54,205 - INFO - <BrokerConnection client_id=kafka-python-producer-88, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 10:02:34,305 - INFO - 成功插入 79 条记录到 public.logs_user_info_message
+2025-10-29 10:02:34,306 - INFO - <BrokerConnection client_id=kafka-python-producer-89, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 10:02:34,309 - INFO - <BrokerConnection client_id=kafka-python-producer-89, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 10:02:34,309 - INFO - <BrokerConnection client_id=kafka-python-producer-89, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 10:02:34,424 - INFO - <BrokerConnection client_id=kafka-python-producer-89, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 10:02:34,427 - INFO - <BrokerConnection client_id=kafka-python-producer-89, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 10:02:34,428 - INFO - <BrokerConnection client_id=kafka-python-producer-89, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 10:02:34,513 - INFO - Kafka发送完成 - 总条数: 79, 成功: 79, 失败: 0
+2025-10-29 10:02:34,514 - INFO - <BrokerConnection client_id=kafka-python-producer-89, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 10:03:14,630 - INFO - 成功插入 90 条记录到 public.logs_user_info_message
+2025-10-29 10:03:14,631 - INFO - <BrokerConnection client_id=kafka-python-producer-90, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 10:03:14,634 - INFO - <BrokerConnection client_id=kafka-python-producer-90, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 10:03:14,634 - INFO - <BrokerConnection client_id=kafka-python-producer-90, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 10:03:14,741 - INFO - <BrokerConnection client_id=kafka-python-producer-90, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 10:03:14,742 - INFO - <BrokerConnection client_id=kafka-python-producer-90, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 10:03:14,742 - INFO - <BrokerConnection client_id=kafka-python-producer-90, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 10:03:14,846 - INFO - Kafka发送完成 - 总条数: 90, 成功: 90, 失败: 0
+2025-10-29 10:03:14,847 - INFO - <BrokerConnection client_id=kafka-python-producer-90, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 10:03:54,964 - INFO - 成功插入 80 条记录到 public.logs_user_info_message
+2025-10-29 10:03:54,965 - INFO - <BrokerConnection client_id=kafka-python-producer-91, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 10:03:54,985 - INFO - <BrokerConnection client_id=kafka-python-producer-91, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 10:03:54,985 - INFO - <BrokerConnection client_id=kafka-python-producer-91, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 10:03:55,089 - INFO - <BrokerConnection client_id=kafka-python-producer-91, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 10:03:55,103 - INFO - <BrokerConnection client_id=kafka-python-producer-91, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 10:03:55,103 - INFO - <BrokerConnection client_id=kafka-python-producer-91, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 10:03:55,218 - INFO - Kafka发送完成 - 总条数: 80, 成功: 80, 失败: 0
+2025-10-29 10:03:55,218 - INFO - <BrokerConnection client_id=kafka-python-producer-91, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 10:05:11,431 - INFO - 成功插入 146 条记录到 public.logs_user_info_message
+2025-10-29 10:05:11,433 - INFO - <BrokerConnection client_id=kafka-python-producer-92, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 10:05:11,436 - INFO - <BrokerConnection client_id=kafka-python-producer-92, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 10:05:11,436 - INFO - <BrokerConnection client_id=kafka-python-producer-92, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 10:05:11,552 - INFO - <BrokerConnection client_id=kafka-python-producer-92, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 10:05:11,553 - INFO - <BrokerConnection client_id=kafka-python-producer-92, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 10:05:11,553 - INFO - <BrokerConnection client_id=kafka-python-producer-92, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 10:05:11,719 - INFO - Kafka发送完成 - 总条数: 146, 成功: 146, 失败: 0
+2025-10-29 10:05:11,720 - INFO - <BrokerConnection client_id=kafka-python-producer-92, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 10:05:51,871 - INFO - 成功插入 81 条记录到 public.logs_user_info_message
+2025-10-29 10:05:51,873 - INFO - <BrokerConnection client_id=kafka-python-producer-93, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 10:05:51,880 - INFO - <BrokerConnection client_id=kafka-python-producer-93, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 10:05:51,880 - INFO - <BrokerConnection client_id=kafka-python-producer-93, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 10:05:51,990 - INFO - <BrokerConnection client_id=kafka-python-producer-93, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 10:05:51,992 - INFO - <BrokerConnection client_id=kafka-python-producer-93, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 10:05:51,993 - INFO - <BrokerConnection client_id=kafka-python-producer-93, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 10:05:52,085 - INFO - Kafka发送完成 - 总条数: 81, 成功: 81, 失败: 0
+2025-10-29 10:05:52,085 - INFO - <BrokerConnection client_id=kafka-python-producer-93, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 10:06:32,231 - INFO - 成功插入 80 条记录到 public.logs_user_info_message
+2025-10-29 10:06:32,232 - INFO - <BrokerConnection client_id=kafka-python-producer-94, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 10:06:32,235 - INFO - <BrokerConnection client_id=kafka-python-producer-94, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 10:06:32,235 - INFO - <BrokerConnection client_id=kafka-python-producer-94, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 10:06:32,352 - INFO - <BrokerConnection client_id=kafka-python-producer-94, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 10:06:32,353 - INFO - <BrokerConnection client_id=kafka-python-producer-94, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 10:06:32,353 - INFO - <BrokerConnection client_id=kafka-python-producer-94, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 10:06:32,432 - INFO - Kafka发送完成 - 总条数: 80, 成功: 80, 失败: 0
+2025-10-29 10:06:32,433 - INFO - <BrokerConnection client_id=kafka-python-producer-94, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 10:07:12,582 - INFO - 成功插入 79 条记录到 public.logs_user_info_message
+2025-10-29 10:07:12,583 - INFO - <BrokerConnection client_id=kafka-python-producer-95, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 10:07:12,585 - INFO - <BrokerConnection client_id=kafka-python-producer-95, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 10:07:12,586 - INFO - <BrokerConnection client_id=kafka-python-producer-95, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 10:07:12,693 - INFO - <BrokerConnection client_id=kafka-python-producer-95, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 10:07:12,695 - INFO - <BrokerConnection client_id=kafka-python-producer-95, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 10:07:12,697 - INFO - <BrokerConnection client_id=kafka-python-producer-95, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 10:07:12,787 - INFO - Kafka发送完成 - 总条数: 79, 成功: 79, 失败: 0
+2025-10-29 10:07:12,788 - INFO - <BrokerConnection client_id=kafka-python-producer-95, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 10:08:19,062 - INFO - 成功插入 124 条记录到 public.logs_user_info_message
+2025-10-29 10:08:19,064 - INFO - <BrokerConnection client_id=kafka-python-producer-96, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 10:08:19,066 - INFO - <BrokerConnection client_id=kafka-python-producer-96, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 10:08:19,067 - INFO - <BrokerConnection client_id=kafka-python-producer-96, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 10:08:19,175 - INFO - <BrokerConnection client_id=kafka-python-producer-96, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 10:08:19,190 - INFO - <BrokerConnection client_id=kafka-python-producer-96, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 10:08:19,190 - INFO - <BrokerConnection client_id=kafka-python-producer-96, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 10:08:19,319 - INFO - Kafka发送完成 - 总条数: 124, 成功: 124, 失败: 0
+2025-10-29 10:08:19,319 - INFO - <BrokerConnection client_id=kafka-python-producer-96, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 10:08:59,410 - INFO - 成功插入 84 条记录到 public.logs_user_info_message
+2025-10-29 10:08:59,411 - INFO - <BrokerConnection client_id=kafka-python-producer-97, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 10:08:59,413 - INFO - <BrokerConnection client_id=kafka-python-producer-97, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 10:08:59,415 - INFO - <BrokerConnection client_id=kafka-python-producer-97, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 10:08:59,520 - INFO - <BrokerConnection client_id=kafka-python-producer-97, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 10:08:59,520 - INFO - <BrokerConnection client_id=kafka-python-producer-97, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 10:08:59,521 - INFO - <BrokerConnection client_id=kafka-python-producer-97, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 10:08:59,607 - INFO - Kafka发送完成 - 总条数: 84, 成功: 84, 失败: 0
+2025-10-29 10:08:59,607 - INFO - <BrokerConnection client_id=kafka-python-producer-97, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 10:09:39,719 - INFO - 成功插入 79 条记录到 public.logs_user_info_message
+2025-10-29 10:09:39,720 - INFO - <BrokerConnection client_id=kafka-python-producer-98, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 10:09:39,722 - INFO - <BrokerConnection client_id=kafka-python-producer-98, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 10:09:39,722 - INFO - <BrokerConnection client_id=kafka-python-producer-98, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 10:09:39,831 - INFO - <BrokerConnection client_id=kafka-python-producer-98, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 10:09:39,833 - INFO - <BrokerConnection client_id=kafka-python-producer-98, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 10:09:39,834 - INFO - <BrokerConnection client_id=kafka-python-producer-98, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 10:09:39,924 - INFO - Kafka发送完成 - 总条数: 79, 成功: 79, 失败: 0
+2025-10-29 10:09:39,925 - INFO - <BrokerConnection client_id=kafka-python-producer-98, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 10:10:20,070 - INFO - 成功插入 73 条记录到 public.logs_user_info_message
+2025-10-29 10:10:20,071 - INFO - <BrokerConnection client_id=kafka-python-producer-99, node_id=bootstrap-0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 10:10:20,088 - INFO - <BrokerConnection client_id=kafka-python-producer-99, node_id=bootstrap-0 host=172.17.42.124:9092 <checking_api_versions_recv> [IPv4 ('172.17.42.124', 9092)]>: Broker version identified as 2.6
+2025-10-29 10:10:20,088 - INFO - <BrokerConnection client_id=kafka-python-producer-99, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 10:10:20,206 - INFO - <BrokerConnection client_id=kafka-python-producer-99, node_id=0 host=172.17.42.124:9092 <connecting> [IPv4 ('172.17.42.124', 9092)]>: connecting to 172.17.42.124:9092 [('172.17.42.124', 9092) IPv4]
+2025-10-29 10:10:20,207 - INFO - <BrokerConnection client_id=kafka-python-producer-99, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Connection complete.
+2025-10-29 10:10:20,207 - INFO - <BrokerConnection client_id=kafka-python-producer-99, node_id=bootstrap-0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 
+2025-10-29 10:10:20,280 - INFO - Kafka发送完成 - 总条数: 73, 成功: 73, 失败: 0
+2025-10-29 10:10:20,281 - INFO - <BrokerConnection client_id=kafka-python-producer-99, node_id=0 host=172.17.42.124:9092 <connected> [IPv4 ('172.17.42.124', 9092)]>: Closing connection. 

@@ -1,8 +1,9 @@
-
-
+import org.apache.flink.configuration.Configuration;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.TableResult;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
+import java.lang.String;
+import java.lang.Exception;
 
 public class Kafka_Flink_sql3 {
     public static void main(String[] args) throws Exception {
@@ -10,9 +11,16 @@ public class Kafka_Flink_sql3 {
 
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         StreamTableEnvironment tenv = StreamTableEnvironment.create(env);
+
+        // 添加 Flink 配置
+        Configuration config = new Configuration();
+        config.setInteger("rest.port", 8081);
         env.setParallelism(1);
 
-        // 创建源表（保持不变）
+        // 启用检查点（对于生产环境很重要）
+        env.enableCheckpointing(10000); // 10秒
+
+        // 创建源表 - 优化版本
         tenv.executeSql(
                 "CREATE TABLE t_kafka_sales_source (\n" +
                         "  `id` STRING,\n" +
@@ -39,7 +47,7 @@ public class Kafka_Flink_sql3 {
                         "          THEN TO_TIMESTAMP_LTZ(CAST(CAST(ts AS DOUBLE) * 1000 AS BIGINT), 3)\n" +
                         "          ELSE TO_TIMESTAMP_LTZ(CAST(CAST(ts AS DOUBLE) AS BIGINT), 3)\n" +
                         "        END\n" +
-                        "      ELSE TO_TIMESTAMP_LTZ(insert_time, 3)\n" +
+                        "      ELSE TO_TIMESTAMP_LTZ(COALESCE(insert_time, cdc_timestamp), 3)\n" +
                         "    END,\n" +
                         "  WATERMARK FOR event_time AS event_time - INTERVAL '5' SECOND\n" +
                         ") WITH (\n" +
@@ -49,44 +57,42 @@ public class Kafka_Flink_sql3 {
                         "  'properties.group.id' = 'flink-sales-agg-" + System.currentTimeMillis() + "',\n" +
                         "  'scan.startup.mode' = 'earliest-offset',\n" +
                         "  'format' = 'json',\n" +
-                        "  'json.ignore-parse-errors' = 'true'\n" +
+                        "  'json.ignore-parse-errors' = 'true',\n" +
+                        "  'json.timestamp-format.standard' = 'ISO-8601'\n" +
                         ")"
         );
 
-        // 2. 创建日期过滤的视图，只保留2025-10-23当天的数据
+        // 创建过滤视图 - 添加数据质量检查
         tenv.executeSql(
-                "CREATE TEMPORARY VIEW t_daily_sales AS\n" +
+                "CREATE TEMPORARY VIEW t_cleaned_sales AS\n" +
                         "SELECT \n" +
-                        "  id, order_id, user_name,product_id,sale_num, total_amount, event_time, op\n" +
+                        "  id, order_id, user_name, product_id, sale_num, \n" +
+                        "  CAST(total_amount AS DECIMAL(18,2)) as total_amount,\n" +
+                        "  event_time, op\n" +
                         "FROM t_kafka_sales_source\n" +
                         "WHERE \n" +
                         "  op IN ('r', '+I', '+U')\n" +
-                        "  AND CAST(event_time AS DATE) = DATE '2025-10-23'"
+                        "  AND total_amount IS NOT NULL\n" +
+                        "  AND total_amount > 0\n" +
+                        "  AND event_time IS NOT NULL"
         );
 
-        // 3. 每10分钟窗口聚合（仅23号数据）- 去掉ORDER BY
-//        System.out.println("=== 2025-10-23 每10分钟销售统计 ===");
-//        tenv.executeSql(
-//                "SELECT\n" +
-//                        "  TUMBLE_START(event_time, INTERVAL '10' MINUTE) AS window_start,\n" +
-//                        "  TUMBLE_END(event_time, INTERVAL '10' MINUTE) AS window_end,\n" +
-//                        "  SUM(total_amount) AS window_sales,\n" +
-//                        "  COUNT(DISTINCT order_id) AS order_count\n" +
-//                        "FROM t_daily_sales\n" +
-//                        "GROUP BY TUMBLE(event_time, INTERVAL '10' MINUTE)"
-//        ).print();
+        // 执行主查询
+        System.out.println("=== 开始执行销售数据分析 ===");
 
-
-
-
-        tenv.executeSql(
+        TableResult result = tenv.executeSql(
                 "WITH window_gmv AS (\n" +
                         "    SELECT \n" +
                         "        window_start,\n" +
                         "        window_end,\n" +
-                        "        SUM(CAST(total_amount AS DECIMAL(18,2))) as total_gmv\n" +
+                        "        SUM(total_amount) as total_gmv\n" +
                         "    FROM TABLE(\n" +
-                        "        CUMULATE(TABLE t_kafka_sales_source, DESCRIPTOR(event_time), INTERVAL '10' MINUTES, INTERVAL '1' DAY)\n" +
+                        "        CUMULATE(\n" +
+                        "            TABLE t_cleaned_sales, \n" +
+                        "            DESCRIPTOR(event_time), \n" +
+                        "            INTERVAL '10' MINUTES, \n" +
+                        "            INTERVAL '1' DAY\n" +
+                        "        )\n" +
                         "    )\n" +
                         "    WHERE DATE_FORMAT(event_time, 'yyyy-MM-dd') = '2025-10-23'\n" +
                         "    GROUP BY window_start, window_end\n" +
@@ -95,7 +101,7 @@ public class Kafka_Flink_sql3 {
                         "    SELECT \n" +
                         "        window_start,\n" +
                         "        window_end,\n" +
-                        "        LISTAGG(id, ',') as top5_ids\n" +
+                        "        LISTAGG(id, ',') WITHIN GROUP (ORDER BY id) as top5_ids\n" +
                         "    FROM (\n" +
                         "        SELECT \n" +
                         "            window_start,\n" +
@@ -103,10 +109,15 @@ public class Kafka_Flink_sql3 {
                         "            id,\n" +
                         "            ROW_NUMBER() OVER (\n" +
                         "                PARTITION BY window_start, window_end \n" +
-                        "                ORDER BY SUM(CAST(total_amount AS DECIMAL(18,2))) DESC\n" +
+                        "                ORDER BY SUM(total_amount) DESC\n" +
                         "            ) as rn\n" +
                         "        FROM TABLE(\n" +
-                        "            CUMULATE(TABLE t_kafka_sales_source, DESCRIPTOR(event_time), INTERVAL '10' MINUTES, INTERVAL '1' DAY)\n" +
+                        "            CUMULATE(\n" +
+                        "                TABLE t_cleaned_sales, \n" +
+                        "                DESCRIPTOR(event_time), \n" +
+                        "                INTERVAL '10' MINUTES, \n" +
+                        "                INTERVAL '1' DAY\n" +
+                        "            )\n" +
                         "        )\n" +
                         "        WHERE DATE_FORMAT(event_time, 'yyyy-MM-dd') = '2025-10-23'\n" +
                         "        GROUP BY window_start, window_end, id\n" +
@@ -118,7 +129,7 @@ public class Kafka_Flink_sql3 {
                         "    SELECT \n" +
                         "        window_start,\n" +
                         "        window_end,\n" +
-                        "        LISTAGG(product_id, ',') as top5_product_ids\n" +
+                        "        LISTAGG(product_id, ',') WITHIN GROUP (ORDER BY product_id) as top5_product_ids\n" +
                         "    FROM (\n" +
                         "        SELECT \n" +
                         "            window_start,\n" +
@@ -126,10 +137,15 @@ public class Kafka_Flink_sql3 {
                         "            product_id,\n" +
                         "            ROW_NUMBER() OVER (\n" +
                         "                PARTITION BY window_start, window_end \n" +
-                        "                ORDER BY SUM(CAST(total_amount AS DECIMAL(18,2))) DESC\n" +
+                        "                ORDER BY SUM(total_amount) DESC\n" +
                         "            ) as rn\n" +
                         "        FROM TABLE(\n" +
-                        "            CUMULATE(TABLE t_kafka_sales_source, DESCRIPTOR(event_time), INTERVAL '10' MINUTES, INTERVAL '1' DAY)\n" +
+                        "            CUMULATE(\n" +
+                        "                TABLE t_cleaned_sales, \n" +
+                        "                DESCRIPTOR(event_time), \n" +
+                        "                INTERVAL '10' MINUTES, \n" +
+                        "                INTERVAL '1' DAY\n" +
+                        "            )\n" +
                         "        )\n" +
                         "        WHERE DATE_FORMAT(event_time, 'yyyy-MM-dd') = '2025-10-23'\n" +
                         "        GROUP BY window_start, window_end, product_id\n" +
@@ -146,23 +162,12 @@ public class Kafka_Flink_sql3 {
                         "    COALESCE(tp.top5_product_ids, '') as top5_product_ids\n" +
                         "FROM window_gmv wg\n" +
                         "LEFT JOIN top_ids ti ON wg.window_start = ti.window_start AND wg.window_end = ti.window_end\n" +
-                        "LEFT JOIN top_products tp ON wg.window_start = tp.window_start AND wg.window_end = tp.window_end"
-        ).print();
+                        "LEFT JOIN top_products tp ON wg.window_start = tp.window_start AND wg.window_end = tp.window_end\n" +
+                        "ORDER BY wg.window_start"
+        );
 
+        result.print();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        env.execute("Kafka_Flink_sql");
+        env.execute("Kafka_Flink_SQL_Analysis");
     }
 }
