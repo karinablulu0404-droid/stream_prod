@@ -1,0 +1,8 @@
+﻿# 开发环境配置
+kafka.bootstrap.servers=172.17.55.4:9092
+postgresql.host=172.17.55.4
+postgresql.port=5432
+postgresql.database=spider_db
+postgresql.username=postgres
+postgresql.password=Hth1028,./
+flink.parallelism=1

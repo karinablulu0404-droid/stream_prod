@@ -2,8 +2,9 @@ import org.apache.flink.configuration.Configuration;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.TableResult;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
-import java.lang.String;
-import java.lang.Exception;
+
+// 添加以下导入语句
+
 
 public class Kafka_Flink_sql3 {
     public static void main(String[] args) throws Exception {

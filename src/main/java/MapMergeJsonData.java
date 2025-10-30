@@ -1,5 +1,4 @@
 
-
 import com.alibaba.fastjson2.JSONObject;
 import org.apache.flink.api.common.functions.RichMapFunction;
 
