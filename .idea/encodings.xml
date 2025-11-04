@@ -4,9 +4,30 @@
     <file url="file://$PROJECT_DIR$/spider_amap_weather.log" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/strea_py1/spider_amap_weather.log" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/strea_py1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/strea_py1/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/stream-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/stream-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/stream-common/strea_py1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/stream-common/strea_py1/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/stream-common/stream-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/stream-common/stream-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/stream-common/stream-realtime/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/stream-common/stream-realtime/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/stream-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/stream-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/stream-core/src/main/resources/filter" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/stream-realtime/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/stream-realtime/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/stream_py/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/stream_py/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/stream_py/src/spider_amap_weather.log" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/stream_py/stream-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/stream_py/stream-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/stream_py/stream-realtime/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/stream_py/stream-realtime/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/stream_py/stream_py/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/stream_py/stream_py/src/main/resources" charset="UTF-8" />
   </component>
 </project>

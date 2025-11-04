@@ -24,25 +24,43 @@
 
         <!-- Flink 相关版本 -->
         <flink.version>1.17.1</flink.version>
-        <scala.version>2.12</scala.version>
+        <scala.version>2.12.17</scala.version>
         <scala.binary.version>2.12</scala.binary.version>
 
         <!-- 第三方依赖版本 -->
-        <lombok.version>1.18.20</lombok.version>
-        <guava.version>33.5.0-jre</guava.version>
-        <okhttp.version>5.1.0</okhttp.version>
-        <hadoop.version>3.0.0</hadoop.version>
-        <fastjson2.version>2.0.59</fastjson2.version>
-        <commonscli.version>1.3.1</commonscli.version>
-        <parquet.version>1.10.0</parquet.version>
+        <lombok.version>1.18.28</lombok.version>
+        <guava.version>32.1.2-jre</guava.version>
+        <okhttp.version>4.11.0</okhttp.version>
+        <hadoop.version>3.3.6</hadoop.version>
+        <fastjson2.version>2.0.43</fastjson2.version>
+        <commonscli.version>1.5.0</commonscli.version>
+        <parquet.version>1.13.1</parquet.version>
         <commons.dbutils.version>1.7</commons.dbutils.version>
+        <gson.version>2.10.1</gson.version>
 
-        <!-- CDH 相关 -->
-        <cdh.dep.version>3.0.0-cdh6.3.2</cdh.dep.version>
+        <!-- 数据库驱动 -->
+        <mysql.connector.version>8.0.33</mysql.connector.version>
+        <postgresql.connector.version>42.6.0</postgresql.connector.version>
+
+        <!-- CDC 连接器版本 -->
+        <flink.cdc.mysql.version>2.4.0</flink.cdc.mysql.version>
+        <flink.cdc.postgres.version>2.4.2</flink.cdc.postgres.version>
+        <flink.cdc.sqlserver.version>3.0.0</flink.cdc.sqlserver.version>
+
+        <!-- 其他连接器 -->
+        <doris.connector.version>1.5.0</doris.connector.version>
+        <hologres.connector.version>1.4.2</hologres.connector.version>
+        <flink.jdbc.connector.version>3.1.1-1.17</flink.jdbc.connector.version>
+
+        <!-- HBase 版本 -->
+        <hbase.version>2.4.17</hbase.version>
 
         <!-- 日志相关 -->
-        <slf4j.version>1.7.25</slf4j.version>
-        <log4j.version>2.14.0</log4j.version>
+        <slf4j.version>2.0.7</slf4j.version>
+        <log4j.version>2.20.0</log4j.version>
+
+        <!-- 测试相关 -->
+        <junit.version>4.13.2</junit.version>
     </properties>
 
     <dependencyManagement>
@@ -79,6 +97,18 @@
                 <version>${flink.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.apache.flink</groupId>
+                <artifactId>flink-connector-jdbc</artifactId>
+                <version>${flink.jdbc.connector.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.flink</groupId>
+                <artifactId>flink-hbase_${scala.binary.version}</artifactId>
+                <version>${flink.version}</version>
+            </dependency>
+
             <!-- Flink Table -->
             <dependency>
                 <groupId>org.apache.flink</groupId>
@@ -104,6 +134,12 @@
                 <version>${flink.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.apache.flink</groupId>
+                <artifactId>flink-table-common</artifactId>
+                <version>${flink.version}</version>
+            </dependency>
+
             <!-- Flink Formats -->
             <dependency>
                 <groupId>org.apache.flink</groupId>
@@ -123,24 +159,37 @@
                 <version>${flink.version}</version>
             </dependency>
 
-            <!-- 第三方 Connectors -->
+            <!-- CDC Connectors -->
             <dependency>
-                <groupId>org.apache.flink</groupId>
-                <artifactId>flink-hbase_${scala.binary.version}</artifactId>
-                <version>${flink.version}</version>
+                <groupId>com.ververica</groupId>
+                <artifactId>flink-connector-mysql-cdc</artifactId>
+                <version>${flink.cdc.mysql.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.ververica</groupId>
-                <artifactId>flink-connector-mysql-cdc</artifactId>
-                <version>2.4.0</version>
+                <artifactId>flink-connector-postgres-cdc</artifactId>
+                <version>${flink.cdc.postgres.version}</version>
             </dependency>
 
             <dependency>
+                <groupId>com.ververica</groupId>
+                <artifactId>flink-connector-sqlserver-cdc</artifactId>
+                <version>${flink.cdc.sqlserver.version}</version>
+            </dependency>
+
+            <!-- 其他连接器 -->
+            <dependency>
                 <groupId>com.alibaba.hologres</groupId>
                 <artifactId>hologres-connector-flink-1.17</artifactId>
-                <version>1.4.2</version>
+                <version>${hologres.connector.version}</version>
                 <classifier>jar-with-dependencies</classifier>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.doris</groupId>
+                <artifactId>flink-doris-connector-1.17</artifactId>
+                <version>${doris.connector.version}</version>
             </dependency>
 
             <!-- Hadoop 生态 -->
@@ -158,6 +207,12 @@
 
             <dependency>
                 <groupId>org.apache.hadoop</groupId>
+                <artifactId>hadoop-hdfs-client</artifactId>
+                <version>${hadoop.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.hadoop</groupId>
                 <artifactId>hadoop-auth</artifactId>
                 <version>${hadoop.version}</version>
                 <exclusions>
@@ -166,6 +221,19 @@
                         <artifactId>slf4j-reload4j</artifactId>
                     </exclusion>
                 </exclusions>
+            </dependency>
+
+            <!-- HBase -->
+            <dependency>
+                <groupId>org.apache.hbase</groupId>
+                <artifactId>hbase-client</artifactId>
+                <version>${hbase.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.hbase</groupId>
+                <artifactId>hbase-server</artifactId>
+                <version>${hbase.version}</version>
             </dependency>
 
             <!-- Parquet -->
@@ -201,6 +269,12 @@
             </dependency>
 
             <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>${gson.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>commons-cli</groupId>
                 <artifactId>commons-cli</artifactId>
                 <version>${commonscli.version}</version>
@@ -218,6 +292,19 @@
                 <version>${okhttp.version}</version>
             </dependency>
 
+            <!-- 数据库驱动 -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.connector.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>${postgresql.connector.version}</version>
+            </dependency>
+
             <!-- 日志 -->
             <dependency>
                 <groupId>org.slf4j</groupId>
@@ -226,9 +313,36 @@
             </dependency>
 
             <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-simple</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-to-slf4j</artifactId>
                 <version>${log4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-core</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+
+            <!-- 测试 -->
+            <dependency>
+                <groupId>org.apache.flink</groupId>
+                <artifactId>flink-test-utils</artifactId>
+                <version>${flink.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -236,13 +350,14 @@
     <build>
         <pluginManagement>
             <plugins>
+                <!-- Scala 编译插件 -->
                 <plugin>
                     <groupId>net.alchim31.maven</groupId>
                     <artifactId>scala-maven-plugin</artifactId>
-                    <version>3.2.2</version>
+                    <version>4.8.1</version>
                     <configuration>
-                        <scalaVersion>2.12.17</scalaVersion>
-                        <scalaCompatVersion>2.12</scalaCompatVersion>
+                        <scalaVersion>${scala.version}</scalaVersion>
+                        <scalaCompatVersion>${scala.binary.version}</scalaCompatVersion>
                     </configuration>
                     <executions>
                         <execution>
@@ -263,42 +378,113 @@
                     </executions>
                 </plugin>
 
+                <!-- Java 编译插件 -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.8.0</version>
+                    <version>3.11.0</version>
                     <configuration>
                         <source>${maven.compiler.source}</source>
                         <target>${maven.compiler.target}</target>
                         <encoding>${project.build.sourceEncoding}</encoding>
+                        <parameters>true</parameters>
                     </configuration>
                 </plugin>
 
+                <!-- 资源处理插件 -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-resources-plugin</artifactId>
                     <version>3.3.1</version>
                     <configuration>
                         <encoding>${project.build.sourceEncoding}</encoding>
+                        <useDefaultDelimiters>true</useDefaultDelimiters>
                     </configuration>
+                </plugin>
+
+                <!-- 打包插件 -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>3.5.0</version>
+                    <configuration>
+                        <descriptorRefs>
+                            <descriptorRef>jar-with-dependencies</descriptorRef>
+                        </descriptorRefs>
+                        <archive>
+                            <manifest>
+                                <addClasspath>true</addClasspath>
+                                <classpathPrefix>lib/</classpathPrefix>
+                            </manifest>
+                        </archive>
+                        <appendAssemblyId>false</appendAssemblyId>
+                    </configuration>
+                </plugin>
+
+                <!-- 清理插件 -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>3.3.1</version>
+                </plugin>
+
+                <!-- 依赖插件 -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>3.6.1</version>
                 </plugin>
             </plugins>
         </pluginManagement>
 
+        <!-- 默认资源配置 -->
         <resources>
             <resource>
-                <directory>src/main/resources/</directory>
+                <directory>src/main/resources</directory>
                 <filtering>true</filtering>
                 <includes>
                     <include>**/*.conf</include>
                     <include>**/*.csv</include>
                     <include>**/*.properties</include>
                     <include>**/*.xml</include>
+                    <include>**/*.yaml</include>
+                    <include>**/*.yml</include>
                 </includes>
                 <excludes>
-                    <exclude>filter/*</exclude>
+                    <exclude>filter/**</exclude>
+                    <exclude>test/**</exclude>
                 </excludes>
             </resource>
         </resources>
     </build>
+
+    <!-- 统一 Profiles 配置 -->
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <build.profile>dev</build.profile>
+                <build.profile.id>dev</build.profile.id>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>stage</id>
+            <properties>
+                <build.profile>stage</build.profile>
+                <build.profile.id>stage</build.profile.id>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>prod</id>
+            <properties>
+                <build.profile>prod</build.profile>
+                <build.profile.id>prod</build.profile.id>
+            </properties>
+        </profile>
+    </profiles>
 </project>

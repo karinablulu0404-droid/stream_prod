@@ -1,3 +1,5 @@
+# !/usr/bin/python
+# coding: utf-8
 import json
 import math
 import random
@@ -5,11 +7,9 @@ import threading
 import uuid
 import logging
 from multiprocessing import Pool
-
 import requests
 import ujson
 import time as tm
-
 from kafka import KafkaProducer
 from kafka.errors import KafkaTimeoutError, KafkaError
 from pip._internal.cli.cmdoptions import retries
@@ -18,10 +18,13 @@ from minio import Minio, S3Error
 from datetime import timedelta, datetime, time
 
 import pandas as pd
-import psycopg2
 import pymssql
+import psycopg2
 from psycopg2.extras import RealDictCursor, execute_values
 from typing import Optional, List, Dict, Any
+
+
+
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', 1000)
 pd.set_option('display.max_colwidth', 200)
@@ -42,24 +45,21 @@ search_list = ['运动套装', '瑜伽服', '背心', '斜挎包', '休闲衫', 
 user_device_change_rate = 0.1
 
 # postgres conf
-postgresql_ip = 'cdh01'
+postgresql_ip = '127.0.0.1'
 postgresql_port = 5432
 postgresql_user_name = 'postgres'
-postgresql_user_pwd = '123456'
+postgresql_user_pwd = 'Wjk19990921.'
 postgresql_db = 'spider_db'
 postgresql_db_schema = 'public'
 
-
-
-
 # sqlserver conf
-sqlserver_ip = '192.168.200.102'
+sqlserver_ip = 'localhost'
 sqlserver_port = "1433"
 sqlserver_user_name = 'sa'
-sqlserver_user_pwd = 'Xy0511./'
-sqlserver_db = 'realtime_v3'
+sqlserver_user_pwd = 'Wjk19990921.'
+sqlserver_db = 'MyAppDB'
 sqlserver_db_schema = 'dbo'
-sqlserver_db_jdbc_url = 'jdbc:sqlserver://192.168.200.102:1433'
+sqlserver_db_jdbc_url = 'jdbc:sqlserver://localhost:1433'
 
 # minio conf
 minio_endpoint = ""
@@ -70,15 +70,15 @@ bucket_name = ""
 folder_prefix = ""
 
 # mysql conf
-mysql_ip = 'cdh03'
+mysql_ip = ''
 mysql_port = "3306"
 mysql_user_name = 'root'
-mysql_user_pwd = 'root'
+mysql_user_pwd = ''
 mysql_db = 'realtime_v3'
 
 # kafka
 kafka_log_topic = 'realtime_v3_logs'
-kafka_bootstrap_servers = 'cdh01:9092,cdh02:9092,cdh03:9092'
+kafka_bootstrap_servers = '172.17.42.124:9092'
 kafka_batch_size = 100
 
 minio_client = Minio(
@@ -136,80 +136,80 @@ def write_orders_to_sqlserver(order_list):
     """批量写入订单数据到SQL Server数据库"""
     conn = None
     try:
-        import pyodbc
-
-        # 🔥 修改这里：使用 ODBC Driver 18（您安装的版本）
-        conn_str = (
-            f"DRIVER={{ODBC Driver 18 for SQL Server}};"  # 改为 18
-            f"SERVER={sqlserver_ip},{sqlserver_port};"
-            f"DATABASE={sqlserver_db};"
-            f"UID={sqlserver_user_name};"
-            f"PWD={sqlserver_user_pwd};"
-            "TrustServerCertificate=yes;"  # 重要：处理证书问题
-            "Encrypt=yes;"  # ODBC 18 默认要求加密
+        # 建立数据库连接
+        conn = pymssql.connect(
+            server=sqlserver_ip,
+            port=sqlserver_port,
+            user=sqlserver_user_name,
+            password=sqlserver_user_pwd,
+            database=sqlserver_db
         )
-        conn = pyodbc.connect(conn_str)
-        cursor = conn.cursor()
 
-        # 创建插入SQL（使用?作为参数占位符）
-        insert_sql = """
-        INSERT INTO oms_order_dtl (
-            order_id, user_id, user_name, phone_number, product_link, 
-            product_id, color, size, item_id, material, sale_num, 
-            sale_amount, total_amount, product_name, is_online_sales, 
-            shipping_address, recommendations_product_ids, ds, ts
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        """
-
-        # 准备批量数据
-        data = []
-        for order in order_list:
-            # 处理recommendations_product_ids字段
-            rec_ids = order["recommendations_product_ids"]
-            if isinstance(rec_ids, list):
-                rec_ids = ','.join(rec_ids)
-            elif rec_ids is None:
-                rec_ids = ''
-
-            # 处理布尔值字段
-            is_online = 1 if order["is_online_sales"] else 0
-
-            row = (
-                str(order["order_id"]),
-                str(order["user_id"]),
-                str(order["user_name"]),
-                str(order["phone_number"]),
-                str(order["product_link"])[:255],
-                str(order["product_id"]),
-                str(order["color"]),
-                str(order["size"]),
-                str(order["item_id"]) if order["item_id"] else '',
-                str(order["material"]) if order["material"] else '',
-                int(order["sale_num"]),
-                float(order["sale_amount"]),
-                float(order["total_amount"]),
-                str(order["product_name"])[:255],
-                is_online,
-                str(order["shipping_address"])[:255],
-                str(rec_ids)[:1000],
-                order["ds"],
-                int(float(order["ts"]))
+        with conn.cursor() as cursor:
+            # 创建插入SQL（使用参数化查询防止SQL注入）
+            # noinspection SqlResolve
+            insert_sql = """
+            INSERT INTO oms_order_dtl (
+                order_id, user_id, user_name, phone_number, product_link, 
+                product_id, color, size, item_id, material, sale_num, 
+                sale_amount, total_amount, product_name, is_online_sales, 
+                shipping_address, recommendations_product_ids, ds, ts
+            ) VALUES (
+                %s, %s, %s, %s, %s, 
+                %s, %s, %s, %s, %s, %s, 
+                %s, %s, %s, %s, %s, 
+                %s, %s, %s
             )
-            data.append(row)
+            """
 
-        # 执行批量插入
-        cursor.executemany(insert_sql, data)
-        conn.commit()
+            # 准备批量数据（所有字段转换为字符串）
+            data = []
+            for order in order_list:
+                # 处理recommendations_product_ids字段
+                rec_ids = order["recommendations_product_ids"]
+                if isinstance(rec_ids, list):
+                    rec_ids = ','.join(rec_ids)
 
-        print(f"✅ 成功插入 {len(order_list)} 条订单记录到 SQL Server")
+                # 处理布尔值字段
+                is_online = "1" if order["is_online_sales"] else "0"
+
+                row = (
+                    str(order["order_id"]),
+                    str(order["user_id"]),
+                    str(order["user_name"]),
+                    str(order["phone_number"]),
+                    str(order["product_link"])[:255],  # 截断超长字符串
+                    str(order["product_id"]),
+                    str(order["color"]),
+                    str(order["size"]),
+                    str(order["item_id"]),
+                    str(order["material"]),
+                    str(order["sale_num"]),
+                    str(order["sale_amount"]),
+                    str(order["total_amount"]),
+                    str(order["product_name"])[:255],
+                    is_online,
+                    str(order["shipping_address"])[:255],
+                    str(rec_ids)[:1000],
+                    str(order["ds"]),
+                    str(int(order["ts"]))
+                )
+                data.append(row)
+
+            # 执行批量插入
+            cursor.executemany(insert_sql, data)
+            conn.commit()
+
+            print(f"成功插入 {len(order_list)} 条订单记录")
 
     except Exception as ee:
-        print(f"❌ 写入SQL Server数据库时发生错误: {ee}")
+        print(f"写入数据库时发生错误: {ee}")
         if conn:
             conn.rollback()
     finally:
         if conn:
             conn.close()
+
 
 def generate_random_list(original_list, min_length=1, max_length=None):
     if max_length is None:
@@ -1070,7 +1070,7 @@ def main(ds_ms):
 
 
 if __name__ == '__main__':
-    main(ds_ms=20251025)
+    main(ds_ms=20251103)
     # print(generate_random_in_range(1, 5, data_type="int"))
     # collect_minio_user_device_2postgresql()
     # print(generate_uuid_order_id())
