@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/aka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/aka/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spider_amap_weather.log" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
@@ -18,8 +20,15 @@
     <file url="file://$PROJECT_DIR$/stream-core/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/stream-core/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/stream-core/src/main/resources/filter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/stream-core/stream-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/stream-core/stream-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/stream-core/stream-realtime/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/stream-core/stream-realtime/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/stream-realtime/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/stream-realtime/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/stream_core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/stream_core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/stream_core/src/main/resources/filter" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/stream_py/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/stream_py/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/stream_py/src/spider_amap_weather.log" charset="GBK" />

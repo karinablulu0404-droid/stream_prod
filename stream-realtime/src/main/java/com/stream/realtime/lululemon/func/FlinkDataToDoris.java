@@ -1,4 +1,4 @@
-package com.stream.realtime.lululemon;
+package com.stream.realtime.lululemon.func;
 
 import com.stream.core.EnvironmentSettingUtils;
 import lombok.SneakyThrows;

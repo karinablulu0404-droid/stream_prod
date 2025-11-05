@@ -11,6 +11,14 @@
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/aka/pom.xml" />
+        <option value="$PROJECT_DIR$/stream-core/pom.xml" />
+        <option value="$PROJECT_DIR$/stream_py/stream-realtime/pom.xml" />
+        <option value="$PROJECT_DIR$/stream_py/stream_py/pom.xml" />
+      </set>
+    </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />

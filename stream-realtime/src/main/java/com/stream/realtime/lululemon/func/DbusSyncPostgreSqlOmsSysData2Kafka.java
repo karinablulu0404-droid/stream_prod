@@ -1,7 +1,8 @@
-package com.stream.realtime.lululemon;
+package com.stream.realtime.lululemon.func;
 
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONObject;
+import com.stream.core.KafkaUtils;
 import com.stream.realtime.lululemon.func.MapMergeJsonData;
 import com.ververica.cdc.connectors.postgres.PostgreSQLSource;
 import com.ververica.cdc.debezium.DebeziumSourceFunction;
@@ -11,12 +12,20 @@ import org.apache.flink.api.common.restartstrategy.RestartStrategies;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
+import org.apache.kafka.clients.admin.AdminClient;
+import org.apache.kafka.clients.admin.AdminClientConfig;
+import org.apache.kafka.clients.admin.ListTopicsResult;
+import org.apache.kafka.clients.admin.NewTopic;
 
+import java.util.Collections;
 import java.util.Properties;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
-
-//
 public class DbusSyncPostgreSqlOmsSysData2Kafka {
+
+    private static final String KAFKA_BOOTSTRAP_SERVERS = "172.17.42.124:9092";
+    private static final String KAFKA_TOPIC = "realtime_v3_logs";
 
     @SneakyThrows
     public static void main(String[] args) {
@@ -34,6 +43,9 @@ public class DbusSyncPostgreSqlOmsSysData2Kafka {
 
         // 设置重启策略
         env.setRestartStrategy(RestartStrategies.fixedDelayRestart(3, 5000));
+
+        // 检查并创建Kafka主题
+        ensureKafkaTopicExists();
 
         // PostgreSQL CDC 配置
         Properties debeziumProperties = new Properties();
@@ -85,23 +97,40 @@ public class DbusSyncPostgreSqlOmsSysData2Kafka {
             SingleOutputStreamOperator<JSONObject> convertStr2JsonDs = dataStreamSource
                     .map(jsonStr -> {
                         try {
+                            System.out.println("收到PostgreSQL变更数据: " + jsonStr);
                             return JSON.parseObject(jsonStr);
                         } catch (Exception e) {
                             System.err.println("JSON 解析错误: " + jsonStr);
-                            return new JSONObject();
+                            // 返回包含错误信息的JSON对象，而不是空对象
+                            JSONObject errorObj = new JSONObject();
+                            errorObj.put("error", true);
+                            errorObj.put("raw_data", jsonStr);
+                            errorObj.put("error_message", e.getMessage());
+                            return errorObj;
                         }
                     })
                     .uid("convert_str_to_json")
                     .name("convertStr2JsonDs");
 
-            // 处理数据并打印
-            convertStr2JsonDs
+            // 处理数据并打印（用于调试）
+            SingleOutputStreamOperator<JSONObject> processedData = convertStr2JsonDs
                     .map(new MapMergeJsonData())
                     .uid("process_json_data")
-                    .name("processJsonData")
-                    .print();
+                    .name("processJsonData");
 
+            // 打印处理后的数据（调试用）
+            processedData.print("✅ PostgreSQL处理结果");
+
+            // 添加Kafka Sink - 将数据写入Kafka
+            processedData
+                    .map(JSONObject::toString) // 将JSONObject转换为字符串
+                    .sinkTo(KafkaUtils.buildKafkaSink(KAFKA_BOOTSTRAP_SERVERS, KAFKA_TOPIC))
+                    .uid("postgres_kafka_sink")
+                    .name("postgresKafkaSink");
+
+            System.out.println("Kafka Sink配置完成，目标主题: " + KAFKA_TOPIC);
             System.out.println("开始执行 Flink 作业...");
+
             env.execute("DbusSyncPostgreSqlOmsSysData2Kafka");
 
         } catch (Exception e) {
@@ -122,6 +151,38 @@ public class DbusSyncPostgreSqlOmsSysData2Kafka {
                 System.err.println("1. 删除现有复制槽: SELECT pg_drop_replication_slot('flink_cdc_slot');");
                 System.err.println("2. 重新运行程序创建新的复制槽");
             }
+        }
+    }
+
+    /**
+     * 确保Kafka主题存在
+     */
+    private static void ensureKafkaTopicExists() {
+        Properties props = new Properties();
+        props.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, KAFKA_BOOTSTRAP_SERVERS);
+        props.put(AdminClientConfig.REQUEST_TIMEOUT_MS_CONFIG, 30000);
+
+        try (AdminClient adminClient = AdminClient.create(props)) {
+            // 检查主题是否存在
+            ListTopicsResult listTopicsResult = adminClient.listTopics();
+            Set<String> topics = listTopicsResult.names().get();
+
+            if (!topics.contains(KAFKA_TOPIC)) {
+                System.out.println("Kafka主题 '" + KAFKA_TOPIC + "' 不存在，正在创建...");
+
+                // 创建主题
+                NewTopic newTopic = new NewTopic(KAFKA_TOPIC, 3, (short) 1); // 3个分区，1个副本
+                adminClient.createTopics(Collections.singletonList(newTopic)).all().get(30, TimeUnit.SECONDS);
+
+                System.out.println("Kafka主题 '" + KAFKA_TOPIC + "' 创建成功");
+            } else {
+                System.out.println("Kafka主题 '" + KAFKA_TOPIC + "' 已存在");
+            }
+
+        } catch (Exception e) {
+            System.err.println("Kafka主题检查/创建失败: " + e.getMessage());
+            e.printStackTrace();
+            throw new RuntimeException("Kafka主题初始化失败", e);
         }
     }
 }

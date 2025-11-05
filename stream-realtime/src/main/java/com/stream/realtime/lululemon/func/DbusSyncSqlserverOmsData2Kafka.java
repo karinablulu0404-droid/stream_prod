@@ -1,8 +1,8 @@
-package com.stream.realtime.lululemon;
+package com.stream.realtime.lululemon.func;
 
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONObject;
-import com.stream.core.EnvironmentSettingUtils;
+// import com.stream.core.EnvironmentSettingUtils; // 暂时注释掉有问题的工具类
 import com.stream.core.KafkaUtils;
 import com.stream.realtime.lululemon.func.MapMergeJsonData;
 import com.ververica.cdc.connectors.base.options.StartupOptions;
@@ -44,14 +44,14 @@ public class DbusSyncSqlserverOmsData2Kafka {
         // 设置并行度
         env.setParallelism(1);
 
-        // 应用环境设置
-        EnvironmentSettingUtils.defaultParameter(env);
+        // 暂时注释掉有问题的环境设置
+        // EnvironmentSettingUtils.defaultParameter(env);
 
         // Kafka 配置
         String bootstrapServers = "172.17.42.124:9092";
         String topicName = "realtime_v3_logs";
 
-        // 处理 Kafka 主题
+        // 处理 Kafka 主题 - 改进版本
         handleKafkaTopic(bootstrapServers, topicName);
 
         Properties debeziumProperties = new Properties();
@@ -91,12 +91,11 @@ public class DbusSyncSqlserverOmsData2Kafka {
     }
 
     /**
-     * 配置检查点
+     * 配置检查点 - 修复版本
      */
     private static void configureCheckpoints(StreamExecutionEnvironment env) {
-        // 明确设置检查点存储为本地文件系统
+        // 使用本地文件系统，避免 HDFS 依赖
         String checkpointDir = "file:///tmp/flink-checkpoints";
-        env.getCheckpointConfig().setCheckpointStorage(new FileSystemCheckpointStorage(checkpointDir));
 
         // 启用检查点，间隔60秒
         env.enableCheckpointing(60000);
@@ -122,10 +121,13 @@ public class DbusSyncSqlserverOmsData2Kafka {
 
         // 配置重启策略
         env.setRestartStrategy(RestartStrategies.fixedDelayRestart(3, Time.seconds(10)));
+
+        // 设置检查点存储 - 放在其他配置之后
+        env.getCheckpointConfig().setCheckpointStorage(checkpointDir);
     }
 
     /**
-     * 处理 Kafka 主题：如果存在则删除，然后创建新主题
+     * 改进的 Kafka 主题处理：如果存在则删除，然后创建新主题
      */
     private static void handleKafkaTopic(String bootstrapServers, String topicName) {
         Properties props = new Properties();
@@ -146,15 +148,34 @@ public class DbusSyncSqlserverOmsData2Kafka {
 
                 System.out.println("Topic '" + topicName + "' deleted successfully");
 
-                // 等待一段时间确保主题被完全删除
-                Thread.sleep(2000);
+                // 增加等待时间确保主题被完全删除
+                Thread.sleep(5000); // 增加到5秒
             }
 
-            // 创建主题
-            System.out.println("Creating topic '" + topicName + "'...");
-            NewTopic newTopic = new NewTopic(topicName, 1, (short) 1); // 1个分区，1个副本
-            adminClient.createTopics(Collections.singletonList(newTopic)).all().get(30, TimeUnit.SECONDS);
-            System.out.println("Topic '" + topicName + "' created successfully");
+            // 创建主题 - 添加重试机制
+            boolean topicCreated = false;
+            int retryCount = 0;
+            while (!topicCreated && retryCount < 3) {
+                try {
+                    System.out.println("Creating topic '" + topicName + "'...");
+                    NewTopic newTopic = new NewTopic(topicName, 1, (short) 1); // 1个分区，1个副本
+                    adminClient.createTopics(Collections.singletonList(newTopic)).all().get(30, TimeUnit.SECONDS);
+                    System.out.println("Topic '" + topicName + "' created successfully");
+                    topicCreated = true;
+                } catch (ExecutionException e) {
+                    if (e.getCause() instanceof org.apache.kafka.common.errors.TopicExistsException) {
+                        System.out.println("Topic still exists, retrying after delay...");
+                        retryCount++;
+                        Thread.sleep(2000); // 等待2秒后重试
+                    } else {
+                        throw e;
+                    }
+                }
+            }
+
+            if (!topicCreated) {
+                System.err.println("Failed to create topic after " + retryCount + " retries");
+            }
 
         } catch (ExecutionException | InterruptedException e) {
             System.err.println("Error handling Kafka topic: " + e.getMessage());

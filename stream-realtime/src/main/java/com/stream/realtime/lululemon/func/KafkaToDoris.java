@@ -1,4 +1,4 @@
-package com.stream.realtime.lululemon;
+package com.stream.realtime.lululemon.func;
 
 import org.apache.flink.api.common.eventtime.WatermarkStrategy;
 import org.apache.flink.api.common.restartstrategy.RestartStrategies;
@@ -11,13 +11,23 @@ import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.TableResult;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
+import org.apache.kafka.clients.consumer.ConsumerConfig;
+import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.apache.kafka.clients.consumer.ConsumerRecords;
+import org.apache.kafka.clients.consumer.KafkaConsumer;
 
 import java.time.Duration;
+import java.util.Arrays;
 import java.util.Properties;
 
 public class KafkaToDoris {
 
     public static void main(String[] args) throws Exception {
+        // 首先检查Kafka数据
+        System.out.println("=== STEP 0: Checking Kafka Data ===");
+        checkKafkaData();
+
+        // 然后继续原有的逻辑
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         StreamTableEnvironment tableEnv = StreamTableEnvironment.create(env);
 
@@ -56,6 +66,109 @@ public class KafkaToDoris {
 
         System.out.println("=== Starting Flink job execution ===");
         env.execute("KafkaToDorisSync");
+    }
+
+    /**
+     * 检查Kafka数据 - 简化版本，不依赖JSON库
+     */
+    public static void checkKafkaData() {
+        Properties props = new Properties();
+        props.setProperty(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "172.17.42.124:9092");
+        props.setProperty(ConsumerConfig.GROUP_ID_CONFIG, "kafka-data-checker-" + System.currentTimeMillis());
+        props.setProperty(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
+        props.setProperty(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false");
+        props.setProperty(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
+        props.setProperty(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
+
+        KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props);
+        consumer.subscribe(Arrays.asList("realtime_v3_logs"));
+
+        System.out.println("=== STARTING KAFKA DATA CHECK ===");
+        System.out.println("Topic: realtime_v3_logs");
+        System.out.println("Bootstrap servers: 172.17.42.124:9092");
+        System.out.println("==================================");
+
+        try {
+            // 尝试获取数据，最多等待10秒
+            ConsumerRecords<String, String> records = consumer.poll(Duration.ofSeconds(10));
+
+            if (records.isEmpty()) {
+                System.out.println("❌ No messages found in Kafka topic!");
+                System.out.println("Possible reasons:");
+                System.out.println("1. Topic is empty");
+                System.out.println("2. Network connection issue");
+                System.out.println("3. Kafka cluster is down");
+                System.out.println("4. Authentication required");
+
+                // 检查topic是否存在
+                try {
+                    System.out.println("Available topics: " + consumer.listTopics().keySet());
+                } catch (Exception e) {
+                    System.out.println("Cannot list topics: " + e.getMessage());
+                }
+            } else {
+                System.out.println("✅ Found " + records.count() + " messages:");
+                System.out.println("==================================");
+
+                int count = 0;
+                for (ConsumerRecord<String, String> record : records) {
+                    if (count >= 5) break; // 只显示前5条
+
+                    System.out.println("📨 Message " + (++count));
+                    System.out.println("Offset: " + record.offset());
+                    System.out.println("Partition: " + record.partition());
+                    System.out.println("Timestamp: " + record.timestamp());
+                    System.out.println("Value: " + record.value());
+                    System.out.println("Length: " + record.value().length() + " characters");
+
+                    // 简单的JSON格式检查（不依赖外部库）
+                    boolean isValidJson = isLikelyJson(record.value());
+                    System.out.println("JSON Format: " + (isValidJson ? "✅ Likely Valid" : "❌ Likely Invalid"));
+
+                    if (isValidJson) {
+                        // 简单的字段检查
+                        checkFieldsSimple(record.value());
+                    }
+                    System.out.println("----------------------------------");
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("❌ Error consuming from Kafka: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            consumer.close();
+            System.out.println("Kafka consumer closed.");
+        }
+        System.out.println("=== KAFKA DATA CHECK COMPLETED ===");
+    }
+
+    /**
+     * 简单的JSON格式检查
+     */
+    private static boolean isLikelyJson(String value) {
+        if (value == null || value.trim().isEmpty()) {
+            return false;
+        }
+        String trimmed = value.trim();
+        return (trimmed.startsWith("{") && trimmed.endsWith("}")) ||
+                (trimmed.startsWith("[") && trimmed.endsWith("]"));
+    }
+
+    /**
+     * 简单的字段检查
+     */
+    private static void checkFieldsSimple(String jsonStr) {
+        String[] expectedFields = {"log_id", "device", "gis", "network", "opa", "log_type", "ts", "product_id", "order_id", "user_id"};
+
+        System.out.println("Field presence check:");
+        for (String field : expectedFields) {
+            // 简单的字符串包含检查
+            if (jsonStr.contains("\"" + field + "\":")) {
+                System.out.println("  ✅ " + field + ": Present");
+            } else {
+                System.out.println("  ❌ " + field + ": MISSING");
+            }
+        }
     }
 
     private static void executeDataSyncWithDebug(StreamTableEnvironment tableEnv) throws Exception {
@@ -158,6 +271,10 @@ public class KafkaToDoris {
             if (mainResult.getJobClient().isPresent()) {
                 JobClient jobClient = mainResult.getJobClient().get();
                 System.out.println("Main stream job ID: " + jobClient.getJobID());
+
+                // 等待作业执行一段时间
+                Thread.sleep(30000);
+                System.out.println("Main stream has been running for 30 seconds");
             }
         } catch (Exception e) {
             System.out.println("Main data stream failed: " + e.getMessage());
@@ -174,7 +291,7 @@ public class KafkaToDoris {
                 .setBootstrapServers(bootstrapServers)
                 .setTopics(topicName)
                 .setGroupId(groupId)
-                .setStartingOffsets(OffsetsInitializer.earliest())  // 修改这里
+                .setStartingOffsets(OffsetsInitializer.earliest())
                 .setValueOnlyDeserializer(new SimpleStringSchema())
                 .setProperties(createKafkaProperties(groupId))
                 .build();
@@ -187,7 +304,7 @@ public class KafkaToDoris {
     private static Properties createKafkaProperties(String groupId) {
         Properties props = new Properties();
         props.setProperty("group.id", groupId);
-        props.setProperty("auto.offset.reset", "earliest");  // 修改这里
+        props.setProperty("auto.offset.reset", "earliest");
         props.setProperty("enable.auto.commit", "false");
         return props;
     }
@@ -219,119 +336,6 @@ public class KafkaToDoris {
                 ")";
 
         tableEnv.executeSql(createDorisTable);
-    }
-
-    private static void executeDataSync(StreamTableEnvironment tableEnv) {
-        // 创建Kafka源表
-        String createKafkaSourceTable = "CREATE TEMPORARY TABLE kafka_source_parsed (\n" +
-                "    `log_id` STRING,\n" +
-                "    `device` STRING,\n" +
-                "    `gis` STRING,\n" +
-                "    `network` STRING,\n" +
-                "    `opa` STRING,\n" +
-                "    `log_type` STRING,\n" +
-                "    `ts` DOUBLE,\n" +
-                "    `product_id` STRING,\n" +
-                "    `order_id` STRING,\n" +
-                "    `user_id` STRING\n" +
-                ") WITH (\n" +
-                "  'connector' = 'kafka',\n" +
-                "  'topic' = 'realtime_v3_logs',\n" +
-                "  'properties.bootstrap.servers' = '172.17.42.124:9092',\n" +
-                "  'properties.group.id' = 'kafka-to-doris-consumer-group',\n" +
-                "  'format' = 'json',\n" +
-                "  'json.fail-on-missing-field' = 'false',\n" +
-                "  'json.ignore-parse-errors' = 'true',\n" +
-                "  'scan.startup.mode' = 'latest-offset'\n" +
-                ")";
-
-        tableEnv.executeSql(createKafkaSourceTable);
-
-        // 1. 首先测试 Kafka 数据源
-        System.out.println("=== STEP 1: Testing Kafka data source ===");
-        String kafkaCountQuery = "SELECT COUNT(*) as kafka_count FROM kafka_source_parsed";
-        try {
-            tableEnv.executeSql(kafkaCountQuery).print();
-        } catch (Exception e) {
-            System.out.println("Kafka source error: " + e.getMessage());
-            e.printStackTrace();
-        }
-
-        // 2. 测试 Doris 连接
-        System.out.println("=== STEP 2: Testing Doris connection ===");
-        try {
-            // 先尝试查询现有数据
-            String dorisCountQuery = "SELECT COUNT(*) as doris_count FROM doris_sink";
-            tableEnv.executeSql(dorisCountQuery).print();
-            System.out.println("Doris connection successful");
-        } catch (Exception e) {
-            System.out.println("Doris connection failed: " + e.getMessage());
-            e.printStackTrace();
-            return;
-        }
-
-        // 3. 测试插入单条数据
-        System.out.println("=== STEP 3: Testing single record insertion ===");
-        String testInsert = "INSERT INTO doris_sink VALUES (" +
-                "'test_log_id_123', " +
-                "'{\"brand\":\"test\",\"plat\":\"android\"}', " +
-                "'{\"ip\":\"127.0.0.1\"}', " +
-                "'{\"net\":\"wifi\"}', " +
-                "'page', " +
-                "'home', " +
-                "1762130535980.0, " +
-                "'test_product_123', " +
-                "'test_order_123', " +
-                "'test_user_123'" +
-                ")";
-
-        try {
-            TableResult testResult = tableEnv.executeSql(testInsert);
-            System.out.println("Test insertion submitted");
-
-            // 等待一段时间让测试数据写入
-            Thread.sleep(5000);
-
-            // 检查测试数据是否写入
-            String checkTestData = "SELECT COUNT(*) as test_count FROM doris_sink WHERE log_id = 'test_log_id_123'";
-            tableEnv.executeSql(checkTestData).print();
-
-        } catch (Exception e) {
-            System.out.println("Test insertion failed: " + e.getMessage());
-            e.printStackTrace();
-        }
-
-        // 4. 开始正式的数据同步
-        System.out.println("=== STEP 4: Starting main data sync ===");
-        String insertIntoSql = "INSERT INTO doris_sink \n" +
-                "SELECT \n" +
-                "  log_id,\n" +
-                "  device,\n" +
-                "  gis,\n" +
-                "  network,\n" +
-                "  opa,\n" +
-                "  log_type,\n" +
-                "  ts,\n" +
-                "  product_id,\n" +
-                "  order_id,\n" +
-                "  user_id\n" +
-                "FROM kafka_source_parsed";
-
-        try {
-            TableResult result = tableEnv.executeSql(insertIntoSql);
-            System.out.println("=== Main data sync job submitted successfully ===");
-
-            // 定期检查数据写入情况
-            for (int i = 0; i < 6; i++) {
-                Thread.sleep(10000); // 每10秒检查一次
-                String progressQuery = "SELECT COUNT(*) as current_count FROM doris_sink";
-                System.out.println("Progress check " + (i + 1) + ":");
-                tableEnv.executeSql(progressQuery).print();
-            }
-
-        } catch (Exception e) {
-            System.out.println("=== Error in main data sync: " + e.getMessage());
-            e.printStackTrace();
-        }
+        System.out.println("Doris sink table created successfully");
     }
 }

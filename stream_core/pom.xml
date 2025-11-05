@@ -16,9 +16,20 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Flink 版本 -->
+        <flink.version>1.17.1</flink.version>
+        <!-- Scala 版本 -->
+        <scala.binary.version>2.12</scala.binary.version>
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.8.18</version>
+        </dependency>
+
         <!-- HTTP 客户端 -->
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
@@ -65,10 +76,11 @@
             <artifactId>flink-connector-kafka</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.apache.flink</groupId>
-            <artifactId>flink-hbase_${scala.binary.version}</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.apache.flink</groupId>-->
+<!--            <artifactId>flink-hbase_2.12</artifactId>-->
+<!--            <version>${flink.version}</version>-->
+<!--        </dependency>-->
 
         <!-- HBase -->
         <dependency>

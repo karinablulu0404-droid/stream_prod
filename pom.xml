@@ -10,9 +10,9 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>stream-core</module>
         <module>stream-realtime</module>
         <module>stream_py</module>
+        <module>stream_core</module>
     </modules>
 
     <properties>
