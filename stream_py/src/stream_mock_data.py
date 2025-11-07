@@ -1,29 +1,27 @@
 # !/usr/bin/python
 # coding: utf-8
 import json
+import logging
 import math
 import random
 import threading
-import uuid
-import logging
-from multiprocessing import Pool
-import requests
-import ujson
 import time as tm
-from kafka import KafkaProducer
-from kafka.errors import KafkaTimeoutError, KafkaError
-from pip._internal.cli.cmdoptions import retries
-from tqdm import tqdm
-from minio import Minio, S3Error
+import uuid
 from datetime import timedelta, datetime, time
-
-import pandas as pd
-import pymssql
-import psycopg2
-from psycopg2.extras import RealDictCursor, execute_values
+from multiprocessing import Pool
 from typing import Optional, List, Dict, Any
 
-
+import pandas as pd
+import psycopg2
+import pymssql
+import requests
+import ujson
+from kafka import KafkaProducer
+from kafka.errors import KafkaTimeoutError, KafkaError
+from minio import Minio, S3Error
+from pip._internal.cli.cmdoptions import retries
+from psycopg2.extras import RealDictCursor, execute_values
+from tqdm import tqdm
 
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', 1000)
@@ -1070,7 +1068,7 @@ def main(ds_ms):
 
 
 if __name__ == '__main__':
-    main(ds_ms=20251105)
+    main(ds_ms=20251106)
     # print(generate_random_in_range(1, 5, data_type="int"))
     # collect_minio_user_device_2postgresql()
     # print(generate_uuid_order_id())
