@@ -1,6 +1,8 @@
 import os
 import re
+import time
 import warnings
+from datetime import datetime
 
 import pandas as pd
 import pymssql
@@ -11,14 +13,14 @@ warnings.filterwarnings('ignore', category=UserWarning, message='pandas only sup
 
 load_dotenv()
 
-# 获取环境变量并添加验证
+# 获取环境变量
 mysql_ip = os.getenv('sqlserver_ip')
 mysql_port = os.getenv('sqlserver_port')
 mysql_user_name = os.getenv('sqlserver_user_name')
 mysql_user_pwd = os.getenv('sqlserver_user_pwd')
 mysql_order_db = os.getenv('sqlserver_db')
 
-# 验证环境变量
+# 验证环境变量函数（保持不变）
 def validate_env_variables():
     required_vars = {
         'sqlserver_ip': mysql_ip,
@@ -39,20 +41,15 @@ def validate_env_variables():
             print(f"  {var}=您的值")
         return False
 
-    # 验证端口，如果未设置则使用默认值
     if not mysql_port:
         print("警告: sqlserver_port 未设置，使用默认端口 1433")
-
     return True
 
+# 编码修复函数（保持不变）
 def fix_encoding(text):
-    """
-    修复编码问题
-    """
     if not isinstance(text, str):
         return text
 
-    # 尝试不同的编码修复方式
     encodings_to_try = [
         ('latin-1', 'utf-8'),
         ('latin-1', 'gbk'),
@@ -63,19 +60,13 @@ def fix_encoding(text):
 
     for src_enc, dst_enc in encodings_to_try:
         try:
-            # 先编码再解码
             return text.encode(src_enc).decode(dst_enc)
         except (UnicodeEncodeError, UnicodeDecodeError):
             continue
-
-    # 如果所有编码都失败，返回原文本
     return text
 
-
+# 产品信息拆分函数（保持不变）
 def split_product_info(text):
-    """
-    根据丨和汉字拆分产品信息
-    """
     if not isinstance(text, str) or not text.strip():
         return {
             'brand': '',
@@ -84,11 +75,7 @@ def split_product_info(text):
             'full_text': text
         }
 
-    # 先修复编码
     cleaned_text = fix_encoding(text)
-
-    # 使用正则表达式匹配
-    # 匹配模式：品牌丨英文部分 中文部分 其他信息
     pattern = r'^([^丨]+)丨([^\u4e00-\u9fa5]*)([\u4e00-\u9fa5].*)$'
 
     match = re.match(pattern, cleaned_text)
@@ -105,11 +92,8 @@ def split_product_info(text):
             'original_text': text
         }
     else:
-        # 如果没有匹配到，尝试其他拆分方式
-        # 检查是否包含中文
         chinese_chars = re.findall(r'[\u4e00-\u9fa5]', cleaned_text)
         if chinese_chars:
-            # 找到第一个汉字的位置
             first_chinese_index = cleaned_text.find(chinese_chars[0])
             return {
                 'brand': '',
@@ -127,18 +111,10 @@ def split_product_info(text):
                 'original_text': text
             }
 
-
-try:
-    # 验证环境变量
-    if not validate_env_variables():
-        exit(1)
-
-    # 设置端口，如果为空则使用默认值
+def get_database_connection():
+    """获取数据库连接"""
     port = int(mysql_port) if mysql_port else 1433
-
-    # 连接数据库
-    print(f"尝试连接数据库: {mysql_ip}:{port}, 数据库: {mysql_order_db}")
-    conn = pymssql.connect(
+    return pymssql.connect(
         server=mysql_ip,
         user=mysql_user_name,
         password=mysql_user_pwd,
@@ -146,58 +122,124 @@ try:
         port=port,
         charset='UTF-8'
     )
-    print("数据库连接成功!")
 
-    # SQL查询
-    query_sql = """
-    SELECT 
-        order_id,
-        user_id,
-        product_id,
-        total_amount,
-        product_name
-    FROM oms_order_dtl;
-    """
+def process_new_data(last_timestamp=None):
+    """处理新数据 - 使用时间戳字段"""
+    try:
+        conn = get_database_connection()
 
-    # 获取数据
-    df = pd.read_sql_query(query_sql, conn)
-    print(f"获取到 {len(df)} 条数据")
+        # 根据时间戳来查询新数据
+        if last_timestamp:
+            query_sql = """
+            SELECT 
+                order_id,
+                user_id,
+                product_id,
+                total_amount,
+                product_name,
+                ds,
+                ts
+            FROM oms_order_dtl 
+            WHERE ts > %s
+            ORDER BY ts;
+            """
+            df = pd.read_sql_query(query_sql, conn, params=[last_timestamp])
+        else:
+            # 第一次运行，获取所有数据
+            query_sql = """
+            SELECT 
+                order_id,
+                user_id,
+                product_id,
+                total_amount,
+                product_name,
+                ds,
+                ts
+            FROM oms_order_dtl
+            ORDER BY ts;
+            """
+            df = pd.read_sql_query(query_sql, conn)
 
-    # 对product_name列应用编码修复
-    df['product_name_cleaned'] = df['product_name'].apply(fix_encoding)
+        conn.close()
 
-    # 处理所有产品名称
-    results = []
-    for i, row in df.iterrows():
-        product_name = row['product_name']
-        result = split_product_info(product_name)
-        results.append(result)
+        if len(df) == 0:
+            return None, last_timestamp
 
-    # 将结果合并到原始DataFrame
-    result_df = pd.DataFrame(results)
-    final_df = pd.concat([df, result_df], axis=1)
+        # 处理产品名称
+        df['product_name_cleaned'] = df['product_name'].apply(fix_encoding)
 
-    # 打印前10条结果
-    print("\n前10条产品信息拆分结果:")
-    print("=" * 100)
-    for i, row in final_df.head(10).iterrows():
-        print(f"产品 {i + 1}:")
-        print(f"  订单ID: {row['order_id']}")
-        print(f"  品牌: {row['brand']}")
-        print(f"  英文部分: {row['english_name']}")
-        print(f"  中文部分: {row['chinese_name']}")
-        print(f"  修复后完整文本: {row['full_text']}")
-        print("-" * 100)
+        results = []
+        for i, row in df.iterrows():
+            product_name = row['product_name']
+            result = split_product_info(product_name)
+            results.append(result)
 
-    # 统计品牌分布
-    brand_stats = final_df['brand'].value_counts()
-    print("\n品牌统计:")
-    for brand, count in brand_stats.items():
-        print(f"  {brand}: {count}条")
+        # 合并结果
+        result_df = pd.DataFrame(results)
+        final_df = pd.concat([df, result_df], axis=1)
 
-    conn.close()
+        # 获取最新的时间戳
+        new_last_timestamp = final_df['ts'].max()
 
-except Exception as e:
-    print(f"数据处理失败: {e}")
-    import traceback
-    traceback.print_exc()
+        return final_df, new_last_timestamp
+
+    except Exception as e:
+        print(f"数据处理失败: {e}")
+        return None, last_timestamp
+
+def real_time_monitoring():
+    """实时监控主函数"""
+    print("=== 开始实时数据监控 ===")
+    print("按 Ctrl+C 停止监控")
+
+    # 验证环境变量
+    if not validate_env_variables():
+        return
+
+    last_timestamp = None
+    check_interval = 30  # 检查间隔（秒）
+
+    try:
+        while True:
+            current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            print(f"\n[{current_time}] 检查新数据...")
+
+            # 处理新数据
+            new_data, last_timestamp = process_new_data(last_timestamp)
+
+            if new_data is not None and len(new_data) > 0:
+                print(f"发现 {len(new_data)} 条新记录:")
+                print("=" * 80)
+
+                for i, row in new_data.iterrows():
+                    print(f"新订单 {i + 1}:")
+                    print(f"  订单ID: {row['order_id']}")
+                    print(f"  用户ID: {row['user_id']}")
+                    print(f"  产品ID: {row['product_id']}")
+                    print(f"  品牌: {row['brand']}")
+                    print(f"  英文部分: {row['english_name']}")
+                    print(f"  中文部分: {row['chinese_name']}")
+                    print(f"  金额: {row['total_amount']}")
+                    print(f"  时间: {row['ds']}")
+                    print("-" * 80)
+
+                # 品牌统计
+                brand_stats = new_data['brand'].value_counts()
+                print("新数据品牌统计:")
+                for brand, count in brand_stats.items():
+                    print(f"  {brand}: {count}条")
+            else:
+                print("没有发现新数据")
+
+            print(f"等待 {check_interval} 秒后再次检查...")
+            time.sleep(check_interval)
+
+    except KeyboardInterrupt:
+        print("\n\n=== 监控已停止 ===")
+    except Exception as e:
+        print(f"监控出错: {e}")
+        import traceback
+        traceback.print_exc()
+
+if __name__ == "__main__":
+    real_time_monitoring()

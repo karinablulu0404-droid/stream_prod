@@ -4,6 +4,7 @@ import random
 import re
 import time
 import warnings
+from typing import Dict, List, Set
 
 import pandas as pd
 import pymssql
@@ -34,39 +35,187 @@ SILICONFLOW_API_KEY = 'sk-vwhxpdbxdpnyozrgvbhdpoukpwasgbhscqnmlfezmwhlkkcb'
 SILICONFLOW_API_URL = "https://api.siliconflow.cn/v1/chat/completions"
 MODEL_NAME = "Qwen/Qwen3-8B"
 
-# 从py2.py中集成的敏感词功能
-def get_sensitive_words_list():
-    """读取敏感词文件，返回列表"""
-    res = []
-    try:
-        # 尝试从多个可能的路径读取敏感词文件
+class SensitiveWordClassifier:
+    """敏感词分类器 - 从111.py集成"""
+
+    def __init__(self, use_enhanced_matching: bool = True):
+        self.p0_words: Set[str] = set()  # 严重违规
+        self.p1_words: Set[str] = set()  # 脏话、对线语句、地域歧视、地狱笑话
+        self.p2_words: Set[str] = set()  # 一般敏感词
+        self._word_categories: Dict[str, str] = {}  # 词到分类的映射
+        self.use_enhanced_matching = use_enhanced_matching
+
+        # 基础敏感词库（确保覆盖常见敏感词）
+        self.base_sensitive_words = {
+            "p0": {"毒品", "枪支", "爆炸", "恐怖", "分裂", "邪教", "诈骗", "赌博", "色情"},
+            "p1": {"傻逼", "操你", "妈的", "尼玛", "草泥马", "法克", "废物", "垃圾", "蠢货", "白痴"},
+            "p2": {"地域黑", "地图炮", "死全家", "去死", "白皮猪", "黑鬼"}
+        }
+
+    def load_sensitive_words(self, custom_file_path: str = None) -> bool:
+        """加载并分类敏感词"""
+        try:
+            file_path = self._find_sensitive_words_file(custom_file_path)
+            file_words = []
+
+            if file_path:
+                file_words = self._read_words_from_file(file_path)
+                logger.info(f"从文件加载了 {len(file_words)} 个敏感词")
+
+            # 合并基础词库和文件词库
+            all_words = self._merge_word_lists(file_words)
+            self._classify_words(all_words)
+
+            logger.info(f"敏感词分类完成 - P0: {len(self.p0_words)}个, P1: {len(self.p1_words)}个, P2: {len(self.p2_words)}个")
+            return True
+
+        except Exception as e:
+            logger.error(f"加载失败: {e}，使用基础词库")
+            self._load_base_words_only()
+            return False
+
+    def _merge_word_lists(self, file_words: List[str]) -> List[str]:
+        """合并词库"""
+        all_words = set()
+        for category_words in self.base_sensitive_words.values():
+            all_words.update(category_words)
+        all_words.update(file_words)
+        logger.info(f"合并后总词数: {len(all_words)}")
+        return list(all_words)
+
+    def _load_base_words_only(self):
+        """仅加载基础词库"""
+        all_words = set()
+        for category_words in self.base_sensitive_words.values():
+            all_words.update(category_words)
+        self._classify_words(list(all_words))
+
+    def _find_sensitive_words_file(self, custom_path: str = None) -> str:
+        """查找敏感词文件"""
         possible_paths = [
-            "../resource/data/sensitiveword/Identify-sensitive-words.txt",
-            "./resource/data/sensitiveword/Identify-sensitive-words.txt",
-            "Identify-sensitive-words.txt"
+            custom_path,
+            r"D:\sx1\stream_prod\stream_py\src\test\Identify-sensitive-words.txt",
+            "D:/sx1/stream_prod/stream_py/src/test/Identify-sensitive-words.txt",
+            "./Identify-sensitive-words.txt",
+            "Identify-sensitive-words.txt",
         ]
-
         for file_path in possible_paths:
-            try:
-                with open(file_path, "r", encoding="utf-8") as f:
-                    for line in f:
-                        word = line.strip()
-                        if word and word not in res:
-                            res.append(word)
-                logger.info(f"从 {file_path} 加载了 {len(res)} 个敏感词")
-                break
-            except FileNotFoundError:
-                continue
+            if file_path and os.path.exists(file_path):
+                logger.info(f"找到敏感词文件: {file_path}")
+                return file_path
+        logger.warning("未找到敏感词文件")
+        return None
+
+    def _read_words_from_file(self, file_path: str) -> List[str]:
+        """从文件读取敏感词"""
+        words = set()
+        try:
+            with open(file_path, "r", encoding='utf-8') as f:
+                for line in f:
+                    word = line.strip()
+                    if word and not word.startswith('#'):
+                        if '|' in word:
+                            words.update(w.strip() for w in word.split('|') if w.strip())
+                        else:
+                            words.add(word)
+            return list(words)
+        except Exception as e:
+            logger.error(f"读取文件失败: {e}")
+            return []
+
+    def _classify_words(self, all_words: List[str]):
+        """将敏感词分类"""
+        for word in all_words:
+            category = self._determine_category(word)
+            if category == "p0":
+                self.p0_words.add(word)
+            elif category == "p1":
+                self.p1_words.add(word)
+            else:
+                self.p2_words.add(word)
+            self._word_categories[word] = category
+
+    def _determine_category(self, word: str) -> str:
+        """确定敏感词分类"""
+        # 优先检查基础词库
+        if word in self.base_sensitive_words["p0"]:
+            return "p0"
+        elif word in self.base_sensitive_words["p1"]:
+            return "p1"
+        elif word in self.base_sensitive_words["p2"]:
+            return "p2"
+
+        # 基于关键词分类
+        p0_keywords = ['毒品', '枪支', '暴恐', '分裂', '邪教', '诈骗', '爆炸', '恐怖', '赌博', '色情']
+        p1_keywords = ['傻逼', '操你', '妈的', '地域黑', '地图炮', '尼哥', '尼玛', '草泥马', '法克', '黑鬼', '白皮猪']
+
+        if any(keyword in word for keyword in p0_keywords):
+            return "p0"
+        elif any(keyword in word for keyword in p1_keywords):
+            return "p1"
+        elif len(word) <= 3:
+            return "p1"
         else:
-            # 如果所有路径都找不到文件，使用默认敏感词
-            logger.warning("未找到敏感词文件，使用默认敏感词列表")
-            res = ["垃圾", "废物", "傻逼", "操", "妈的", "特么", "日", "靠", "尼玛"]
+            return "p2"
 
-    except Exception as e:
-        logger.error(f"读取敏感词文件失败: {e}")
-        res = ["垃圾", "废物", "傻逼", "操", "妈的", "特么", "日", "靠", "尼玛"]
+    def check_sensitive(self, text: str) -> Dict[str, List[str]]:
+        """检测文本中是否包含敏感词"""
+        if not text or not isinstance(text, str):
+            return {"p0": [], "p1": [], "p2": []}
 
-    return res
+        result = {"p0": [], "p1": [], "p2": []}
+        text_lower = text.lower()
+
+        if self.use_enhanced_matching:
+            # 增强匹配：直接匹配 + 分词匹配
+            found_words = set()
+
+            # 直接匹配
+            for word, category in self._word_categories.items():
+                if word in text or word.lower() in text_lower:
+                    found_words.add((word, category))
+
+            # 简单分词匹配
+            segments = self._simple_segment(text)
+            for segment in segments:
+                for word, category in self._word_categories.items():
+                    if word in segment or word.lower() in segment.lower():
+                        found_words.add((word, category))
+
+            # 整理结果
+            for word, category in found_words:
+                result[category].append(word)
+        else:
+            # 普通匹配
+            for word, category in self._word_categories.items():
+                if word in text or word.lower() in text_lower:
+                    result[category].append(word)
+
+        # 去重
+        for category in result:
+            result[category] = list(set(result[category]))
+
+        return result
+
+    def _simple_segment(self, text: str) -> List[str]:
+        """简单分词"""
+        delimiters = '，。！？；：""''（）【】《》〈〉、\n\t '
+        pattern = f'([{re.escape(delimiters)}])'
+        segments = re.split(pattern, text)
+        return [seg for seg in segments if seg.strip()]
+
+    def get_statistics(self) -> Dict[str, int]:
+        """获取统计信息"""
+        return {
+            "p0_count": len(self.p0_words),
+            "p1_count": len(self.p1_words),
+            "p2_count": len(self.p2_words),
+            "total_count": len(self._word_categories)
+        }
+
+# 初始化敏感词分类器
+classifier = SensitiveWordClassifier(use_enhanced_matching=True)
+classifier.load_sensitive_words()
 
 def get_random_element(lst):
     """从列表中随机返回一个元素"""
@@ -74,29 +223,27 @@ def get_random_element(lst):
         return None
     return random.choice(lst)
 
-# 初始化敏感词列表
-sensitive_words_list = get_sensitive_words_list()
-political_sensitive_words = sensitive_words_list  # 保持向后兼容
-
 def detect_sensitive_content(text):
-    """检测文本中的敏感内容"""
+    """检测文本中的敏感内容 - 使用新的分类器"""
     if not isinstance(text, str):
         return False, []
 
-    detected_words = []
-    for word in sensitive_words_list:
-        if word in text:
-            detected_words.append(word)
+    result = classifier.check_sensitive(text)
 
-    has_sensitive = len(detected_words) > 0
-    return has_sensitive, detected_words
+    # 合并所有级别的敏感词
+    all_detected_words = []
+    for category in ["p0", "p1", "p2"]:
+        all_detected_words.extend(result[category])
+
+    has_sensitive = len(all_detected_words) > 0
+    return has_sensitive, all_detected_words
 
 def mark_violation_user(conn, user_id, order_id, sensitive_words, review_content):
-    """标记违规用户并记录到数据库"""
+    """标记违规用户并记录到数据库 - 增强版本，包含敏感词级别"""
     try:
         cursor = conn.cursor()
 
-        # 检查用户违规表是否存在，不存在则创建
+        # 检查用户违规表是否存在，不存在则创建（包含所有必要字段）
         check_table_sql = """
         IF OBJECT_ID('user_violation_records', 'U') IS NULL
         BEGIN
@@ -107,26 +254,73 @@ def mark_violation_user(conn, user_id, order_id, sensitive_words, review_content
                 sensitive_words NVARCHAR(500),
                 review_content NVARCHAR(1000),
                 violation_level NVARCHAR(50),
+                p0_count INT DEFAULT 0,
+                p1_count INT DEFAULT 0,
+                p2_count INT DEFAULT 0,
                 handled BIT DEFAULT 0,
                 created_time DATETIME DEFAULT GETDATE()
             )
             PRINT '用户违规记录表创建成功: user_violation_records'
         END
+        ELSE
+        BEGIN
+            -- 表已存在，检查并添加缺失字段
+            IF NOT EXISTS (SELECT 1 FROM sys.columns WHERE object_id = OBJECT_ID('user_violation_records') AND name = 'p0_count')
+            BEGIN
+                ALTER TABLE user_violation_records ADD p0_count INT DEFAULT 0
+                PRINT '添加字段: p0_count'
+            END
+            
+            IF NOT EXISTS (SELECT 1 FROM sys.columns WHERE object_id = OBJECT_ID('user_violation_records') AND name = 'p1_count')
+            BEGIN
+                ALTER TABLE user_violation_records ADD p1_count INT DEFAULT 0
+                PRINT '添加字段: p1_count'
+            END
+            
+            IF NOT EXISTS (SELECT 1 FROM sys.columns WHERE object_id = OBJECT_ID('user_violation_records') AND name = 'p2_count')
+            BEGIN
+                ALTER TABLE user_violation_records ADD p2_count INT DEFAULT 0
+                PRINT '添加字段: p2_count'
+            END
+            
+            IF NOT EXISTS (SELECT 1 FROM sys.columns WHERE object_id = OBJECT_ID('user_violation_records') AND name = 'violation_level')
+            BEGIN
+                ALTER TABLE user_violation_records ADD violation_level NVARCHAR(50)
+                PRINT '添加字段: violation_level'
+            END
+        END
         """
         cursor.execute(check_table_sql)
+        conn.commit()  # 提交表结构变更
+
+        # 分析敏感词级别
+        p0_count = 0
+        p1_count = 0
+        p2_count = 0
+
+        for word in sensitive_words:
+            category = classifier._word_categories.get(word, "p2")
+            if category == "p0":
+                p0_count += 1
+            elif category == "p1":
+                p1_count += 1
+            else:
+                p2_count += 1
 
         # 确定违规级别
         violation_level = "LOW"
-        if len(sensitive_words) >= 3:
+        if p0_count > 0:
+            violation_level = "CRITICAL"
+        elif p1_count >= 2:
             violation_level = "HIGH"
-        elif len(sensitive_words) >= 2:
+        elif p1_count >= 1 or p2_count >= 3:
             violation_level = "MEDIUM"
 
         # 插入违规记录
         insert_sql = """
         INSERT INTO user_violation_records 
-        (user_id, order_id, sensitive_words, review_content, violation_level)
-        VALUES (%s, %s, %s, %s, %s)
+        (user_id, order_id, sensitive_words, review_content, violation_level, p0_count, p1_count, p2_count)
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
         """
 
         cursor.execute(insert_sql, (
@@ -134,7 +328,10 @@ def mark_violation_user(conn, user_id, order_id, sensitive_words, review_content
             order_id,
             ','.join(sensitive_words),
             review_content,
-            violation_level
+            violation_level,
+            p0_count,
+            p1_count,
+            p2_count
         ))
 
         conn.commit()
@@ -153,9 +350,9 @@ def process_violation_users(conn):
 
         # 获取未处理的高风险违规用户
         query_sql = """
-        SELECT user_id, violation_level, sensitive_words, created_time
+        SELECT user_id, violation_level, sensitive_words, p0_count, p1_count, p2_count, created_time
         FROM user_violation_records 
-        WHERE handled = 0 AND violation_level IN ('HIGH', 'MEDIUM')
+        WHERE handled = 0 AND violation_level IN ('CRITICAL', 'HIGH', 'MEDIUM')
         ORDER BY created_time DESC
         """
 
@@ -163,8 +360,8 @@ def process_violation_users(conn):
         violations = cursor.fetchall()
 
         for violation in violations:
-            user_id, level, words, create_time = violation
-            logger.info(f"处理违规用户: {user_id}, 级别: {level}, 敏感词: {words}")
+            user_id, level, words, p0_count, p1_count, p2_count, create_time = violation
+            logger.info(f"处理违规用户: {user_id}, 级别: {level}, P0: {p0_count}, P1: {p1_count}, P2: {p2_count}, 敏感词: {words}")
 
             # 这里可以添加具体的处理逻辑，比如：
             # 1. 发送警告通知
@@ -329,7 +526,7 @@ def generate_ai_review(product_info, user_id, order_id, conn, max_retries=3):
                 if 'choices' in result and len(result['choices']) > 0:
                     review = result['choices'][0]['message']['content'].strip()
 
-                    # 检查并移除敏感词
+                    # 使用新的敏感词检测方法
                     has_sensitive, detected_words = detect_sensitive_content(review)
                     if has_sensitive:
                         # 标记违规用户
@@ -531,6 +728,10 @@ def main():
             charset='UTF-8'
         )
         logger.info("SQL Server数据库连接成功!")
+
+        # 显示敏感词分类器统计信息
+        stats = classifier.get_statistics()
+        logger.info(f"敏感词分类器统计: P0-{stats['p0_count']}个, P1-{stats['p1_count']}个, P2-{stats['p2_count']}个, 总计-{stats['total_count']}个")
 
         # 检查并创建表（如果不存在）- 修复版本
         check_and_create_table(conn)
