@@ -3,7 +3,6 @@ package com.stream.realtime.lululemon.func;
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONObject;
 import com.stream.core.KafkaUtils;
-import com.stream.realtime.lululemon.func.MapMergeJsonData;
 import com.ververica.cdc.connectors.postgres.PostgreSQLSource;
 import com.ververica.cdc.debezium.DebeziumSourceFunction;
 import com.ververica.cdc.debezium.JsonDebeziumDeserializationSchema;
